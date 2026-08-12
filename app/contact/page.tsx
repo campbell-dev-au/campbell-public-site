@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import { EmailIcon, GithubIcon, LinkedinIcon } from "@/components/icons";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -30,24 +31,27 @@ export default function ContactPage() {
             <div className="mt-3 flex flex-col gap-2 text-sm font-medium">
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="text-indigo-600 underline underline-offset-4 dark:text-indigo-400"
+                className="flex items-center gap-2.5 text-indigo-600 underline underline-offset-4 dark:text-indigo-400"
               >
+                <EmailIcon className="h-4 w-4 shrink-0" />
                 {siteConfig.email}
               </a>
               <a
                 href={siteConfig.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-indigo-600 underline underline-offset-4 dark:text-indigo-400"
+                className="flex items-center gap-2.5 text-indigo-600 underline underline-offset-4 dark:text-indigo-400"
               >
+                <LinkedinIcon className="h-4 w-4 shrink-0" />
                 LinkedIn
               </a>
               <a
                 href={siteConfig.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-indigo-600 underline underline-offset-4 dark:text-indigo-400"
+                className="flex items-center gap-2.5 text-indigo-600 underline underline-offset-4 dark:text-indigo-400"
               >
+                <GithubIcon className="h-4 w-4 shrink-0" />
                 GitHub
               </a>
             </div>
