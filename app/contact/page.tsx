@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactForm from "@/components/ContactForm";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -18,14 +19,16 @@ export default function ContactPage() {
         Let&rsquo;s talk.
       </p>
 
-      <div className="mt-10 flex flex-col gap-4">
-        <a
-          href={`mailto:${siteConfig.email}`}
-          className="inline-flex w-fit items-center justify-center rounded-full bg-zinc-950 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
-        >
-          {siteConfig.email}
-        </a>
-        <div className="flex gap-6 text-sm font-medium">
+      <div className="mt-10">
+        <ContactForm />
+      </div>
+
+      <div className="mt-12 flex flex-col gap-3 border-t border-black/10 pt-8 dark:border-white/10">
+        <p className="text-sm text-zinc-500">Prefer email or social?</p>
+        <div className="flex flex-wrap gap-6 text-sm font-medium">
+          <a href={`mailto:${siteConfig.email}`} className="underline underline-offset-4">
+            {siteConfig.email}
+          </a>
           <a
             href={siteConfig.linkedin}
             target="_blank"
