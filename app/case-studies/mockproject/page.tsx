@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CTASection from "@/components/CTASection";
+import PhotoFrame from "@/components/PhotoFrame";
 
 export const metadata: Metadata = {
   title: "Vibe-Code Health Check: An AI-Built WordPress/WooCommerce Integration",
@@ -46,6 +47,13 @@ export default function MockProjectCaseStudy() {
       <h1 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
         An AI-Built WordPress/WooCommerce Integration
       </h1>
+
+      <PhotoFrame
+        src="/images/casestudy-pos-system.jpg"
+        alt="An overhead view of hands ringing up a sale on a point-of-sale tablet in a small shop"
+        className="mt-8 aspect-[21/9]"
+        priority
+      />
 
       <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
         <Stat value="35,000" label="lines of code" />

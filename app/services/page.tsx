@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import PhotoFrame from "@/components/PhotoFrame";
 import { services } from "@/lib/services";
 import { serviceIcons } from "@/components/icons";
 
@@ -13,7 +14,14 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <div className="px-6 py-12 sm:px-10 sm:py-16">
-      <h1 className="text-4xl font-semibold tracking-tight">Services</h1>
+      <PhotoFrame
+        src="/images/services-chart-laptop.jpg"
+        alt="A hand pointing a stylus at a business growth chart on a tablet screen"
+        className="aspect-[4/1]"
+        objectPosition="50% 50%"
+        priority
+      />
+      <h1 className="mt-8 text-4xl font-semibold tracking-tight">Services</h1>
       <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
         Five ways I can help — pick a starting point, or we can figure out
         the right one together.
