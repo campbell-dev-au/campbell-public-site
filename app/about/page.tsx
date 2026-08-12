@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -39,7 +40,16 @@ const skillGroups = [
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
-      <h1 className="text-4xl font-semibold tracking-tight">About</h1>
+      <div className="flex items-center gap-6">
+        <Image
+          src="/images/campbell-davis.jpg"
+          alt="Campbell Davis"
+          width={112}
+          height={112}
+          className="h-28 w-28 flex-shrink-0 rounded-full object-cover"
+        />
+        <h1 className="text-4xl font-semibold tracking-tight">About</h1>
+      </div>
 
       <div className="mt-8 flex max-w-2xl flex-col gap-5 text-base leading-7 text-zinc-700 dark:text-zinc-300">
         <p>

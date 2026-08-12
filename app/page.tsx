@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import ServiceCard from "@/components/ServiceCard";
 import CTASection from "@/components/CTASection";
@@ -6,32 +7,42 @@ import { services } from "@/lib/services";
 export default function Home() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
-      <section className="max-w-2xl">
-        <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-          Software development that ships — from vibe-coded prototypes to
-          production-grade systems.
-        </h1>
-        <p className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-          I&rsquo;m Campbell Davis, a freelance web and software developer
-          based in Adelaide, working with businesses across Australia. Over a
-          decade building, integrating, and rescuing software — including the
-          new wave of AI-generated prototypes that need a professional eye
-          before they can be trusted.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-4">
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center rounded-full bg-zinc-950 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
-          >
-            Book a Vibe-Code Health Check
-          </Link>
-          <Link
-            href="/case-studies"
-            className="inline-flex items-center justify-center rounded-full border border-black/15 px-6 py-3 text-sm font-medium transition-colors hover:border-black/30 dark:border-white/20 dark:hover:border-white/40"
-          >
-            See my work
-          </Link>
+      <section className="flex flex-col-reverse items-start gap-10 sm:flex-row sm:items-center">
+        <div className="max-w-2xl">
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+            Software development that ships — from vibe-coded prototypes to
+            production-grade systems.
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+            I&rsquo;m Campbell Davis, a freelance web and software developer
+            based in Adelaide, working with businesses across Australia. Over
+            a decade building, integrating, and rescuing software — including
+            the new wave of AI-generated prototypes that need a professional
+            eye before they can be trusted.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full bg-zinc-950 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
+            >
+              Book a Vibe-Code Health Check
+            </Link>
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center justify-center rounded-full border border-black/15 px-6 py-3 text-sm font-medium transition-colors hover:border-black/30 dark:border-white/20 dark:hover:border-white/40"
+            >
+              See my work
+            </Link>
+          </div>
         </div>
+        <Image
+          src="/images/campbell-davis.jpg"
+          alt="Campbell Davis"
+          width={192}
+          height={192}
+          priority
+          className="h-32 w-32 flex-shrink-0 rounded-full object-cover sm:h-48 sm:w-48"
+        />
       </section>
 
       <section className="mt-24">
