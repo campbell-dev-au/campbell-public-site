@@ -16,7 +16,7 @@ export default function Home() {
           aria-hidden
           className="pointer-events-none absolute -left-24 top-32 h-72 w-72 rounded-full bg-violet-200/40 blur-3xl dark:bg-violet-700/10"
         />
-        <section className="relative flex flex-col-reverse items-start gap-10 sm:flex-row sm:items-center">
+        <section className="relative flex flex-col-reverse items-start gap-10 p-8 sm:flex-row sm:items-center sm:p-10">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
             Software development that ships — from vibe-coded prototypes to
