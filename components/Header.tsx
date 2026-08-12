@@ -13,7 +13,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50"
+              className="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
             >
               {item.label}
             </Link>

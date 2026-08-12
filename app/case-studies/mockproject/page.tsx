@@ -7,6 +7,17 @@ export const metadata: Metadata = {
     "How a structured health check turned a 35,000-line AI-generated WordPress plugin into a clear, prioritized action plan.",
 };
 
+function Stat({ value, label }: { value: string; label: string }) {
+  return (
+    <div className="rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 dark:border-indigo-500/20 dark:bg-indigo-500/5">
+      <p className="text-3xl font-semibold tracking-tight text-indigo-600 dark:text-indigo-400">
+        {value}
+      </p>
+      <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{label}</p>
+    </div>
+  );
+}
+
 function Section({
   title,
   children,
@@ -35,6 +46,13 @@ export default function MockProjectCaseStudy() {
       <h1 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
         An AI-Built WordPress/WooCommerce Integration
       </h1>
+
+      <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <Stat value="35,000" label="lines of code" />
+        <Stat value="190" label="classes" />
+        <Stat value="0" label="functional tests, before" />
+        <Stat value="3" label="tools recommended" />
+      </div>
 
       <Section title="The situation">
         <p>

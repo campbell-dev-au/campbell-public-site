@@ -26,14 +26,14 @@ export default function ContactPage() {
       <div className="mt-12 flex flex-col gap-3 border-t border-black/10 pt-8 dark:border-white/10">
         <p className="text-sm text-zinc-500">Prefer email or social?</p>
         <div className="flex flex-wrap gap-6 text-sm font-medium">
-          <a href={`mailto:${siteConfig.email}`} className="underline underline-offset-4">
+          <a href={`mailto:${siteConfig.email}`} className="text-indigo-600 underline underline-offset-4 dark:text-indigo-400">
             {siteConfig.email}
           </a>
           <a
             href={siteConfig.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-4"
+            className="text-indigo-600 underline underline-offset-4 dark:text-indigo-400"
           >
             LinkedIn
           </a>
@@ -41,7 +41,7 @@ export default function ContactPage() {
             href={siteConfig.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-4"
+            className="text-indigo-600 underline underline-offset-4 dark:text-indigo-400"
           >
             GitHub
           </a>

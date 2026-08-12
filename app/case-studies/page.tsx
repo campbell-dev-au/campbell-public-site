@@ -28,7 +28,7 @@ export default function CaseStudiesPage() {
           <Link
             key={cs.slug}
             href={`/case-studies/${cs.slug}`}
-            className="group rounded-xl border border-black/10 p-6 transition-colors hover:border-black/25 dark:border-white/10 dark:hover:border-white/25"
+            className="group rounded-xl border border-black/10 p-6 transition-colors hover:border-indigo-300 hover:shadow-sm dark:border-white/10 dark:hover:border-indigo-400/40"
           >
             <h2 className="text-xl font-semibold tracking-tight">
               {cs.title}
@@ -36,7 +36,7 @@ export default function CaseStudiesPage() {
             <p className="mt-3 text-base leading-7 text-zinc-600 dark:text-zinc-400">
               {cs.summary}
             </p>
-            <span className="mt-4 inline-block text-sm font-medium group-hover:underline">
+            <span className="mt-4 inline-block text-sm font-medium text-indigo-600 group-hover:underline dark:text-indigo-400">
               Read the case study →
             </span>
           </Link>

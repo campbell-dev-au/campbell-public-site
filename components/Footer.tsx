@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="flex items-center gap-5">
           <a
             href={`mailto:${siteConfig.email}`}
-            className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50"
+            className="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
           >
             Email
           </a>
@@ -19,7 +19,7 @@ export default function Footer() {
             href={siteConfig.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50"
+            className="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
           >
             LinkedIn
           </a>
@@ -27,13 +27,13 @@ export default function Footer() {
             href={siteConfig.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50"
+            className="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
           >
             GitHub
           </a>
           <Link
             href="/contact"
-            className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50"
+            className="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
           >
             Contact
           </Link>

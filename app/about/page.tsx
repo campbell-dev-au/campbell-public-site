@@ -41,13 +41,19 @@ export default function AboutPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
       <div className="flex items-center gap-6">
-        <Image
-          src="/images/campbell-davis.jpg"
-          alt="Campbell Davis"
-          width={112}
-          height={112}
-          className="h-28 w-28 flex-shrink-0 rounded-full object-cover"
-        />
+        <div className="relative flex-shrink-0">
+          <div
+            aria-hidden
+            className="absolute -inset-1.5 rounded-full bg-gradient-to-br from-indigo-500 to-fuchsia-500 opacity-70 blur-sm"
+          />
+          <Image
+            src="/images/campbell-davis.jpg"
+            alt="Campbell Davis"
+            width={112}
+            height={112}
+            className="relative h-28 w-28 rounded-full object-cover ring-4 ring-white dark:ring-zinc-950"
+          />
+        </div>
         <h1 className="text-4xl font-semibold tracking-tight">About</h1>
       </div>
 
@@ -98,7 +104,7 @@ export default function AboutPage() {
                 {group.items.map((item) => (
                   <li
                     key={item}
-                    className="rounded-full border border-black/10 px-3 py-1 text-sm text-zinc-700 dark:border-white/10 dark:text-zinc-300"
+                    className="rounded-full border border-indigo-100 bg-indigo-50/50 px-3 py-1 text-sm text-indigo-900 dark:border-indigo-500/20 dark:bg-indigo-500/5 dark:text-indigo-200"
                   >
                     {item}
                   </li>
@@ -114,7 +120,7 @@ export default function AboutPage() {
           href={siteConfig.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-4"
+          className="text-indigo-600 underline underline-offset-4 dark:text-indigo-400"
         >
           LinkedIn
         </a>
@@ -122,7 +128,7 @@ export default function AboutPage() {
           href={siteConfig.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-4"
+          className="text-indigo-600 underline underline-offset-4 dark:text-indigo-400"
         >
           GitHub
         </a>

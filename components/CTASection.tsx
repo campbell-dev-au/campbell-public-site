@@ -10,14 +10,22 @@ export default function CTASection({
   buttonLabel?: string;
 }) {
   return (
-    <section className="rounded-2xl bg-zinc-950 px-8 py-12 text-center dark:bg-zinc-900">
-      <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+    <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 px-8 py-12 text-center">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full bg-white/10 blur-3xl"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-fuchsia-300/20 blur-3xl"
+      />
+      <h2 className="relative text-2xl font-semibold tracking-tight text-white sm:text-3xl">
         {heading}
       </h2>
-      <p className="mx-auto mt-3 max-w-xl text-zinc-400">{body}</p>
+      <p className="relative mx-auto mt-3 max-w-xl text-indigo-100">{body}</p>
       <Link
         href="/contact"
-        className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-zinc-950 transition-colors hover:bg-zinc-200"
+        className="relative mt-6 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-indigo-700 transition-colors hover:bg-indigo-50"
       >
         {buttonLabel}
       </Link>
