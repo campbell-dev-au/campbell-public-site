@@ -1,0 +1,47 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Case Studies",
+  description: "Real engagements, including a full vibe-code health check.",
+};
+
+const caseStudies = [
+  {
+    slug: "mockproject",
+    title: "Vibe-Code Health Check: An AI-Built WordPress/WooCommerce Integration",
+    summary:
+      "A structured assessment of a 35,000-line AI-generated plugin — architecture, testing strategy, and security recommendations.",
+  },
+];
+
+export default function CaseStudiesPage() {
+  return (
+    <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
+      <h1 className="text-4xl font-semibold tracking-tight">Case Studies</h1>
+      <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+        A look at how engagements actually play out.
+      </p>
+
+      <div className="mt-12 flex flex-col gap-6">
+        {caseStudies.map((cs) => (
+          <Link
+            key={cs.slug}
+            href={`/case-studies/${cs.slug}`}
+            className="group rounded-xl border border-black/10 p-6 transition-colors hover:border-black/25 dark:border-white/10 dark:hover:border-white/25"
+          >
+            <h2 className="text-xl font-semibold tracking-tight">
+              {cs.title}
+            </h2>
+            <p className="mt-3 text-base leading-7 text-zinc-600 dark:text-zinc-400">
+              {cs.summary}
+            </p>
+            <span className="mt-4 inline-block text-sm font-medium group-hover:underline">
+              Read the case study →
+            </span>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
