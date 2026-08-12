@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/site";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-black/10 dark:border-white/10">
+    <footer className="border-t border-black/10 bg-white/90 backdrop-blur-md dark:border-white/10 dark:bg-zinc-950/90">
       <div className="mx-auto flex max-w-5xl flex-col gap-4 px-6 py-8 text-sm text-zinc-600 dark:text-zinc-400 sm:flex-row sm:items-center sm:justify-between">
         <p>
           © {new Date().getFullYear()} {siteConfig.name}. {siteConfig.location}.

@@ -17,7 +17,7 @@ const caseStudies = [
 
 export default function CaseStudiesPage() {
   return (
-    <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
+    <div className="px-6 py-12 sm:px-10 sm:py-16">
       <h1 className="text-4xl font-semibold tracking-tight">Case Studies</h1>
       <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
         A look at how engagements actually play out.

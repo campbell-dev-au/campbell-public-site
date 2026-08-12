@@ -39,7 +39,7 @@ const skillGroups = [
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
+    <div className="px-6 py-12 sm:px-10 sm:py-16">
       <div className="flex items-center gap-6">
         <div className="relative flex-shrink-0">
           <div

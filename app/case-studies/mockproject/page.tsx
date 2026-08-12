@@ -39,7 +39,7 @@ function Section({
 
 export default function MockProjectCaseStudy() {
   return (
-    <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
+    <div className="px-6 py-12 sm:px-10 sm:py-16">
       <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
         Case Study — Vibe-Code Health Check
       </p>

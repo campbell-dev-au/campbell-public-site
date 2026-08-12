@@ -6,8 +6,8 @@ import { services } from "@/lib/services";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
-      <div className="relative overflow-hidden">
+    <div className="px-6 py-12 sm:px-10 sm:py-16">
+      <div className="relative overflow-hidden rounded-2xl">
         <div
           aria-hidden
           className="pointer-events-none absolute -right-24 -top-32 h-96 w-96 rounded-full bg-gradient-to-br from-indigo-300/50 to-fuchsia-300/30 blur-3xl dark:from-indigo-600/20 dark:to-fuchsia-600/10"
