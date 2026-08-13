@@ -36,7 +36,7 @@ export default function CaseStudiesPage() {
           <Link
             key={cs.slug}
             href={`/case-studies/${cs.slug}`}
-            className="group rounded-box border border-black/10 bg-white/80 p-6 backdrop-blur-sm transition-colors hover:border-indigo-300 hover:shadow-sm dark:border-black dark:bg-white/5 dark:hover:bg-white/10"
+            className="group rounded-box border border-black/10 bg-white/80 p-6 backdrop-blur-sm transition-colors hover:border-indigo-300 hover:shadow-sm dark:border-black/30 dark:bg-white/5 dark:hover:bg-white/10"
           >
             <h2 className="text-xl font-semibold tracking-tight">
               {cs.title}

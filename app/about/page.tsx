@@ -40,7 +40,7 @@ const skillGroups = [
 export default function AboutPage() {
   return (
     <div className="px-6 py-12 sm:px-10 sm:py-16">
-      <div className="relative overflow-hidden rounded-box border border-black/10 bg-indigo-50/40 shadow-sm dark:border-black dark:bg-indigo-500/10">
+      <div className="relative overflow-hidden rounded-box border border-black/10 bg-indigo-50/40 shadow-sm dark:border-black/30 dark:bg-indigo-500/10">
         <div
           aria-hidden
           className="absolute inset-0 opacity-70 dark:opacity-50"
@@ -114,7 +114,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="mt-8 h-fit rounded-box border border-indigo-100 bg-indigo-50/50 p-5 dark:border-black dark:bg-indigo-500/10 lg:mt-0">
+        <div className="mt-8 h-fit rounded-box border border-indigo-100 bg-indigo-50/50 p-5 dark:border-black/30 dark:bg-indigo-500/10 lg:mt-0">
           <h3 className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
             Quick facts
           </h3>
@@ -159,7 +159,7 @@ export default function AboutPage() {
                 {group.items.map((item) => (
                   <li
                     key={item}
-                    className="rounded-box border border-indigo-100 bg-indigo-50/50 px-3 py-1 text-sm text-indigo-900 dark:border-black dark:bg-indigo-500/10 dark:text-indigo-200"
+                    className="rounded-box border border-indigo-100 bg-indigo-50/50 px-3 py-1 text-sm text-indigo-900 dark:border-black/30 dark:bg-indigo-500/10 dark:text-indigo-200"
                   >
                     {item}
                   </li>

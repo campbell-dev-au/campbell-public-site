@@ -65,7 +65,7 @@ export default function ContactForm() {
           name="name"
           type="text"
           required
-          className="rounded-box border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-black dark:bg-white/5 dark:focus:border-indigo-400"
+          className="rounded-box border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-black/30 dark:bg-white/5 dark:focus:border-indigo-400"
         />
       </div>
 
@@ -78,7 +78,7 @@ export default function ContactForm() {
           name="email"
           type="email"
           required
-          className="rounded-box border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-black dark:bg-white/5 dark:focus:border-indigo-400"
+          className="rounded-box border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-black/30 dark:bg-white/5 dark:focus:border-indigo-400"
         />
       </div>
 
@@ -91,7 +91,7 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
-          className="rounded-box border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-black dark:bg-white/5 dark:focus:border-indigo-400"
+          className="rounded-box border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-black/30 dark:bg-white/5 dark:focus:border-indigo-400"
         />
       </div>
 
