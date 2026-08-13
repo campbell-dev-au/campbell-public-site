@@ -34,7 +34,7 @@ export default function ServicesPage() {
           <section
             key={service.slug}
             id={service.slug}
-            className="scroll-mt-24 border-t border-black/10 pt-10 dark:border-white/5 first:border-t-0 first:pt-0 lg:grid lg:grid-cols-[1fr_320px] lg:gap-12"
+            className="scroll-mt-24 border-t border-black/10 pt-10 dark:border-black first:border-t-0 first:pt-0 lg:grid lg:grid-cols-[1fr_320px] lg:gap-12"
           >
             <div>
               <div className="flex items-center gap-4">
@@ -57,7 +57,7 @@ export default function ServicesPage() {
                 </Link>
               )}
             </div>
-            <div className="mt-6 h-fit rounded-box border border-indigo-100 bg-indigo-50/50 p-5 dark:border-transparent dark:bg-indigo-500/10 lg:mt-0">
+            <div className="mt-6 h-fit rounded-box border border-indigo-100 bg-indigo-50/50 p-5 dark:border-black dark:bg-indigo-500/10 lg:mt-0">
               <h3 className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
                 What you get
               </h3>

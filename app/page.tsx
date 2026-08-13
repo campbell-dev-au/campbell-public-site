@@ -38,7 +38,7 @@ export default function Home() {
             </Link>
             <Link
               href="/case-studies"
-              className="inline-flex items-center justify-center rounded-box border border-black/15 px-6 py-3 text-sm font-medium transition-colors hover:border-black/30 dark:border-transparent dark:bg-white/5 dark:hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-box border border-black/15 px-6 py-3 text-sm font-medium transition-colors hover:border-black/30 dark:border-black dark:bg-white/5 dark:hover:bg-white/10"
             >
               See my work
             </Link>
@@ -72,7 +72,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-24 rounded-box border border-indigo-100 bg-indigo-50/50 p-8 dark:border-transparent dark:bg-indigo-500/10 sm:p-10">
+      <section className="mt-24 rounded-box border border-indigo-100 bg-indigo-50/50 p-8 dark:border-black dark:bg-indigo-500/10 sm:p-10">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
           Case study
         </h2>

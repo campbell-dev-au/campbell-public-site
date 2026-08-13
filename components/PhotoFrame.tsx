@@ -15,7 +15,7 @@ export default function PhotoFrame({
 }) {
   return (
     <div
-      className={`relative overflow-hidden rounded-box border border-black/10 shadow-sm dark:border-transparent ${className}`}
+      className={`relative overflow-hidden rounded-box border border-black/10 shadow-sm dark:border-black ${className}`}
     >
       <Image
         src={src}
