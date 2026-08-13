@@ -35,13 +35,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Header />
         <main className="flex-1">
           <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
-            <div className="rounded-box border border-black/5 bg-white shadow-sm dark:border-white/10 dark:bg-zinc-950">
+            <div className="rounded-box border border-black/5 bg-white shadow-sm dark:border-black/30 dark:bg-zinc-900">
               {children}
             </div>
           </div>
