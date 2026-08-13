@@ -57,7 +57,7 @@ export default function ServicesPage() {
                 </Link>
               )}
             </div>
-            <div className="mt-6 h-fit rounded-box border border-indigo-100 bg-indigo-50/50 p-5 dark:border-indigo-500/20 dark:bg-indigo-500/5 lg:mt-0">
+            <div className="mt-6 h-fit rounded-box border border-indigo-100 bg-indigo-50/50 p-5 dark:border-white/10 dark:bg-indigo-500/5 lg:mt-0">
               <h3 className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
                 What you get
               </h3>

@@ -72,7 +72,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-24 rounded-box border border-indigo-100 bg-indigo-50/50 p-8 dark:border-indigo-500/20 dark:bg-indigo-500/5 sm:p-10">
+      <section className="mt-24 rounded-box border border-indigo-100 bg-indigo-50/50 p-8 dark:border-white/10 dark:bg-indigo-500/5 sm:p-10">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
           Case study
         </h2>
