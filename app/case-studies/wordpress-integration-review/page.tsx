@@ -38,7 +38,7 @@ function Section({
   );
 }
 
-export default function MockProjectCaseStudy() {
+export default function WordpressIntegrationReviewCaseStudy() {
   return (
     <div className="px-6 py-12 sm:px-10 sm:py-16">
       <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
@@ -47,6 +47,9 @@ export default function MockProjectCaseStudy() {
       <h1 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
         An AI-Built WordPress/WooCommerce Integration
       </h1>
+      <p className="mt-3 text-sm text-zinc-500">
+        Details anonymised at the client&rsquo;s request.
+      </p>
 
       <PhotoFrame
         src="/images/casestudy-pos-system.jpg"

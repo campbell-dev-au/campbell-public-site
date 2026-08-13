@@ -10,7 +10,6 @@ export type Service = {
   whatYouGet: string[];
   icon: ServiceIconKey;
   group: ServiceGroup;
-  fixedFee?: boolean;
   link?: { href: string; label: string };
 };
 
@@ -29,10 +28,9 @@ export const serviceGroups: { key: ServiceGroup; heading: string }[] = [
 export const services: Service[] = [
   {
     slug: "vibe-code-health-check",
-    title: "Vibe-Coded Prototype Review & Health Check Report",
+    title: "Vibe-Code Health Check",
     icon: "healthcheck",
     group: "fragile-ai",
-    fixedFee: true,
     summary:
       "Get an honest, structured picture of where the prototype actually stands: architecture, security, testing, and a clear path to production.",
     description:
@@ -43,7 +41,7 @@ export const services: Service[] = [
       "Security & tooling recommendations",
       "A written report with an executive summary and prioritized recommendations — no jargon, no push toward an unnecessary rewrite",
     ],
-    link: { href: "/case-studies/mockproject", label: "See a real example" },
+    link: { href: "/case-studies/wordpress-integration-review", label: "See a real example" },
   },
   {
     slug: "vibe-to-production",
@@ -66,7 +64,7 @@ export const services: Service[] = [
     icon: "website",
     group: "need-something-built",
     summary:
-      "I build it fast-loading and maintainable — from marketing sites to internal portals — with the same care I'd want for my own business.",
+      "I build it fast-loading and maintainable — from marketing sites to internal portals — so it's ready to grow with the business, not just launch.",
     description:
       "I'll build it using modern tooling that's fast to load and straightforward to maintain — whether that's a marketing site, a customer portal, or an internal tool — not a bespoke framework only I understand.",
     whatYouGet: [
@@ -81,7 +79,7 @@ export const services: Service[] = [
     icon: "code",
     group: "need-something-built",
     summary:
-      "When there's no off-the-shelf answer, I design and build custom systems and integrations — from ERP-to-scheduling pipelines to full internal platforms.",
+      "When there's no off-the-shelf answer, I design and build custom systems and integrations — connecting the tools you already use into one that actually fits how you work.",
     description:
       "When there's no off-the-shelf answer, I design and build custom systems and integrations — including connecting existing tools that were never meant to talk to each other — with an emphasis on security and long-term supportability.",
     whatYouGet: [

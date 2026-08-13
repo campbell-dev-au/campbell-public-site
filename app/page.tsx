@@ -19,8 +19,8 @@ export default function Home() {
         <section className="relative flex flex-col-reverse items-start gap-10 p-8 sm:flex-row sm:items-center sm:p-10">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            Software development that ships — from vibe-coded prototypes to
-            production-grade systems.
+            Software that ships — including the code AI wrote and nobody has
+            reviewed.
           </h1>
           <p className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             I&rsquo;m Campbell Davis, a freelance web and software developer
@@ -43,6 +43,10 @@ export default function Home() {
               See my work
             </Link>
           </div>
+          <p className="mt-4 text-sm text-zinc-500">
+            Recently: reviewed a 35,000-line AI-built WordPress integration
+            before launch.
+          </p>
         </div>
         <div className="relative flex-shrink-0">
           <div
@@ -94,7 +98,7 @@ export default function Home() {
           plan.
         </p>
         <Link
-          href="/case-studies/mockproject"
+          href="/case-studies/wordpress-integration-review"
           className="mt-5 inline-flex items-center text-sm font-medium text-indigo-600 underline underline-offset-4 dark:text-indigo-400"
         >
           Read the case study →

@@ -15,11 +15,6 @@ export default function ServiceCard({ service }: { service: Service }) {
       </div>
       <div className="flex items-center gap-2">
         <h3 className="text-lg font-semibold tracking-tight">{service.title}</h3>
-        {service.fixedFee && (
-          <span className="rounded-box border border-indigo-200 bg-indigo-50 px-1.5 py-0.5 text-[11px] font-medium text-indigo-700 dark:border-indigo-400/30 dark:bg-indigo-500/10 dark:text-indigo-300">
-            Fixed fee
-          </span>
-        )}
       </div>
       <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-400">
         {service.summary}

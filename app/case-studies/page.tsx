@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
-    slug: "mockproject",
+    slug: "wordpress-integration-review",
     title: "Vibe-Code Health Check: An AI-Built WordPress/WooCommerce Integration",
     summary:
       "A structured assessment of a 35,000-line AI-generated plugin — architecture, testing strategy, and security recommendations.",

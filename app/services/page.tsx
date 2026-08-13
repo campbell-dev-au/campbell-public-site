@@ -8,7 +8,7 @@ import { serviceIcons } from "@/components/icons";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Website development, business process improvement, bespoke software, and vibe-code health checks — five ways I can help.",
+    "Website development, business process improvement, bespoke software, and Vibe-Code Health Checks — five ways I can help.",
 };
 
 export default function ServicesPage() {
@@ -55,11 +55,6 @@ export default function ServicesPage() {
                           </div>
                           <h3 className="flex flex-wrap items-center gap-2 text-2xl font-semibold tracking-tight">
                             {service.title}
-                            {service.fixedFee && (
-                              <span className="rounded-box border border-indigo-200 bg-indigo-50 px-1.5 py-0.5 text-xs font-medium text-indigo-700 dark:border-indigo-400/30 dark:bg-indigo-500/10 dark:text-indigo-300">
-                                Fixed fee
-                              </span>
-                            )}
                           </h3>
                         </div>
                         <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-600 dark:text-zinc-400">
