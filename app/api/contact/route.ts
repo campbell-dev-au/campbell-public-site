@@ -30,25 +30,29 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
   }
 
-  const { GMAIL_USER, GMAIL_APP_PASSWORD, CONTACT_TO_EMAIL } = process.env;
+  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASSWORD, CONTACT_TO_EMAIL } = process.env;
 
-  if (!GMAIL_USER || !GMAIL_APP_PASSWORD) {
-    console.error("Missing GMAIL_USER or GMAIL_APP_PASSWORD env vars.");
+  if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASSWORD) {
+    console.error("Missing SMTP_HOST, SMTP_PORT, SMTP_USER, or SMTP_PASSWORD env vars.");
     return NextResponse.json(
       { error: "Contact form isn't configured yet. Please email me directly." },
       { status: 500 },
     );
   }
 
+  const port = Number(SMTP_PORT);
+
   const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: { user: GMAIL_USER, pass: GMAIL_APP_PASSWORD },
+    host: SMTP_HOST,
+    port,
+    secure: port === 465,
+    auth: { user: SMTP_USER, pass: SMTP_PASSWORD },
   });
 
   try {
     await transporter.sendMail({
-      from: GMAIL_USER,
-      to: CONTACT_TO_EMAIL || GMAIL_USER,
+      from: SMTP_USER,
+      to: CONTACT_TO_EMAIL || SMTP_USER,
       replyTo: email,
       subject: `New contact form message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
