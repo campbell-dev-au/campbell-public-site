@@ -65,7 +65,7 @@ export default function ContactForm() {
           name="name"
           type="text"
           required
-          className="rounded-lg border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-white/20 dark:bg-zinc-950/50 dark:focus:border-indigo-400"
+          className="rounded-md border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-white/20 dark:bg-zinc-950/50 dark:focus:border-indigo-400"
         />
       </div>
 
@@ -78,7 +78,7 @@ export default function ContactForm() {
           name="email"
           type="email"
           required
-          className="rounded-lg border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-white/20 dark:bg-zinc-950/50 dark:focus:border-indigo-400"
+          className="rounded-md border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-white/20 dark:bg-zinc-950/50 dark:focus:border-indigo-400"
         />
       </div>
 
@@ -91,7 +91,7 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
-          className="rounded-lg border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-white/20 dark:bg-zinc-950/50 dark:focus:border-indigo-400"
+          className="rounded-md border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-white/20 dark:bg-zinc-950/50 dark:focus:border-indigo-400"
         />
       </div>
 
@@ -102,7 +102,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex w-fit items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-fuchsia-600 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-60"
+        className="inline-flex w-fit items-center justify-center rounded-md bg-gradient-to-br from-indigo-600 to-fuchsia-600 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-60"
       >
         {status === "submitting" ? "Sending…" : "Send message"}
       </button>

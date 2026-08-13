@@ -94,7 +94,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="mt-8 h-fit rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 dark:border-indigo-500/20 dark:bg-indigo-500/5 lg:mt-0">
+        <div className="mt-8 h-fit rounded-lg border border-indigo-100 bg-indigo-50/50 p-5 dark:border-indigo-500/20 dark:bg-indigo-500/5 lg:mt-0">
           <h3 className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
             Quick facts
           </h3>
@@ -139,7 +139,7 @@ export default function AboutPage() {
                 {group.items.map((item) => (
                   <li
                     key={item}
-                    className="rounded-full border border-indigo-100 bg-indigo-50/50 px-3 py-1 text-sm text-indigo-900 dark:border-indigo-500/20 dark:bg-indigo-500/5 dark:text-indigo-200"
+                    className="rounded-md border border-indigo-100 bg-indigo-50/50 px-3 py-1 text-sm text-indigo-900 dark:border-indigo-500/20 dark:bg-indigo-500/5 dark:text-indigo-200"
                   >
                     {item}
                   </li>

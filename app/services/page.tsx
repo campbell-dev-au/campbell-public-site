@@ -38,7 +38,7 @@ export default function ServicesPage() {
           >
             <div>
               <div className="flex items-center gap-4">
-                <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400">
+                <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-md bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h2 className="text-2xl font-semibold tracking-tight">
@@ -57,7 +57,7 @@ export default function ServicesPage() {
                 </Link>
               )}
             </div>
-            <div className="mt-6 h-fit rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 dark:border-indigo-500/20 dark:bg-indigo-500/5 lg:mt-0">
+            <div className="mt-6 h-fit rounded-lg border border-indigo-100 bg-indigo-50/50 p-5 dark:border-indigo-500/20 dark:bg-indigo-500/5 lg:mt-0">
               <h3 className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
                 What you get
               </h3>

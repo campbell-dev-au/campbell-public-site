@@ -7,7 +7,7 @@ import { services } from "@/lib/services";
 export default function Home() {
   return (
     <div className="px-6 py-12 sm:px-10 sm:py-16">
-      <div className="relative overflow-hidden rounded-2xl">
+      <div className="relative overflow-hidden rounded-lg">
         <div
           aria-hidden
           className="pointer-events-none absolute -right-24 -top-32 h-96 w-96 rounded-full bg-gradient-to-br from-indigo-300/50 to-fuchsia-300/30 blur-3xl dark:from-indigo-600/20 dark:to-fuchsia-600/10"
@@ -32,13 +32,13 @@ export default function Home() {
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-fuchsia-600 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+              className="inline-flex items-center justify-center rounded-md bg-gradient-to-br from-indigo-600 to-fuchsia-600 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
             >
               Book a Vibe-Code Health Check
             </Link>
             <Link
               href="/case-studies"
-              className="inline-flex items-center justify-center rounded-full border border-black/15 px-6 py-3 text-sm font-medium transition-colors hover:border-black/30 dark:border-white/20 dark:hover:border-white/40"
+              className="inline-flex items-center justify-center rounded-md border border-black/15 px-6 py-3 text-sm font-medium transition-colors hover:border-black/30 dark:border-white/20 dark:hover:border-white/40"
             >
               See my work
             </Link>
@@ -72,7 +72,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-24 rounded-2xl border border-indigo-100 bg-indigo-50/50 p-8 dark:border-indigo-500/20 dark:bg-indigo-500/5 sm:p-10">
+      <section className="mt-24 rounded-lg border border-indigo-100 bg-indigo-50/50 p-8 dark:border-indigo-500/20 dark:bg-indigo-500/5 sm:p-10">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
           Case study
         </h2>
