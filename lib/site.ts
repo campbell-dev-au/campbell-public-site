@@ -3,8 +3,8 @@ export const siteConfig = {
   title: "Campbell Davis — Freelance Web & Software Developer",
   description:
     "Freelance web and software developer based in Adelaide, working with businesses across Australia — from website builds to vibe-code health checks and production-ready rebuilds.",
-  url: "https://campbelldavis.dev",
-  email: "campbell.davis90@gmail.com",
+  url: "https://campbelldavis.com.au",
+  email: "hello@campbelldavis.com.au",
   linkedin: "https://linkedin.com/in/campbell-davis",
   github: "https://github.com/campbell-dev-au",
   location: "Adelaide, SA",
