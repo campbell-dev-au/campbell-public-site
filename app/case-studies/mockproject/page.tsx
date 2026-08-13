@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 function Stat({ value, label }: { value: string; label: string }) {
   return (
-    <div className="rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 dark:border-indigo-500/20 dark:bg-indigo-500/5">
+    <div className="rounded-box border border-indigo-100 bg-indigo-50/50 p-5 dark:border-indigo-500/20 dark:bg-indigo-500/5">
       <p className="text-3xl font-semibold tracking-tight text-indigo-600 dark:text-indigo-400">
         {value}
       </p>
@@ -117,7 +117,7 @@ export default function MockProjectCaseStudy() {
           tests with functional tests written in Gherkin — readable by
           both business stakeholders and developers, and directly testable:
         </p>
-        <pre className="mt-4 overflow-x-auto rounded-lg bg-zinc-950 p-5 text-sm leading-6 text-zinc-100 dark:bg-black">
+        <pre className="mt-4 overflow-x-auto rounded-box bg-zinc-950 p-5 text-sm leading-6 text-zinc-100 dark:bg-black">
           <code>{`Feature: ERP product sync
   Shop operators need products from Options ERP to land correctly in WooCommerce.
   Scenario: Simple online product publishes with price and stock

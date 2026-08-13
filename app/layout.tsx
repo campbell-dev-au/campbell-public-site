@@ -41,7 +41,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <main className="flex-1">
           <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
-            <div className="rounded-3xl border border-black/5 bg-white shadow-sm dark:border-white/10 dark:bg-zinc-950">
+            <div className="rounded-box border border-black/5 bg-white shadow-sm dark:border-white/10 dark:bg-zinc-950">
               {children}
             </div>
           </div>

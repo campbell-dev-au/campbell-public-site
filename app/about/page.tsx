@@ -40,21 +40,41 @@ const skillGroups = [
 export default function AboutPage() {
   return (
     <div className="px-6 py-12 sm:px-10 sm:py-16">
-      <div className="flex items-center gap-6">
-        <div className="relative flex-shrink-0">
-          <div
-            aria-hidden
-            className="absolute -inset-1.5 rounded-full bg-gradient-to-br from-indigo-500 to-fuchsia-500 opacity-70 blur-sm"
-          />
-          <Image
-            src="/images/campbell-davis.jpg"
-            alt="Campbell Davis"
-            width={112}
-            height={112}
-            className="relative h-28 w-28 rounded-full object-cover ring-4 ring-white dark:ring-zinc-950"
-          />
+      <div className="relative overflow-hidden rounded-box border border-black/10 bg-indigo-50/40 shadow-sm dark:border-white/10 dark:bg-indigo-500/5">
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-70 dark:opacity-50"
+          style={{
+            backgroundImage:
+              "radial-gradient(var(--dot-color) 1.5px, transparent 1.5px)",
+            backgroundSize: "22px 22px",
+          }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-gradient-to-br from-indigo-300/50 to-fuchsia-300/30 blur-3xl dark:from-indigo-600/20 dark:to-fuchsia-600/10"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-violet-200/40 blur-3xl dark:bg-violet-700/10"
+        />
+        <div className="relative flex items-center gap-6 p-8 sm:p-10">
+          <div className="relative flex-shrink-0">
+            <div
+              aria-hidden
+              className="absolute -inset-1.5 rounded-full bg-gradient-to-br from-indigo-500 to-fuchsia-500 opacity-70 blur-sm"
+            />
+            <Image
+              src="/images/campbell-davis.jpg"
+              alt="Campbell Davis"
+              width={112}
+              height={112}
+              priority
+              className="relative h-28 w-28 rounded-full object-cover ring-4 ring-white dark:ring-zinc-950"
+            />
+          </div>
+          <h1 className="text-4xl font-semibold tracking-tight">About</h1>
         </div>
-        <h1 className="text-4xl font-semibold tracking-tight">About</h1>
       </div>
 
       <div className="mt-8 lg:grid lg:grid-cols-[1fr_280px] lg:gap-12">
@@ -94,7 +114,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="mt-8 h-fit rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 dark:border-indigo-500/20 dark:bg-indigo-500/5 lg:mt-0">
+        <div className="mt-8 h-fit rounded-box border border-indigo-100 bg-indigo-50/50 p-5 dark:border-indigo-500/20 dark:bg-indigo-500/5 lg:mt-0">
           <h3 className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
             Quick facts
           </h3>
@@ -139,7 +159,7 @@ export default function AboutPage() {
                 {group.items.map((item) => (
                   <li
                     key={item}
-                    className="rounded-full border border-indigo-100 bg-indigo-50/50 px-3 py-1 text-sm text-indigo-900 dark:border-indigo-500/20 dark:bg-indigo-500/5 dark:text-indigo-200"
+                    className="rounded-box border border-indigo-100 bg-indigo-50/50 px-3 py-1 text-sm text-indigo-900 dark:border-indigo-500/20 dark:bg-indigo-500/5 dark:text-indigo-200"
                   >
                     {item}
                   </li>
