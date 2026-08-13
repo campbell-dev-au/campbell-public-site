@@ -32,7 +32,7 @@ export default function ContactPage() {
         <ContactForm />
 
         <div className="mt-10 flex h-fit flex-col gap-6 lg:mt-0">
-          <div className="rounded-box border border-indigo-100 bg-indigo-50/50 p-5 dark:border-white/10 dark:bg-indigo-500/5">
+          <div className="rounded-box border border-indigo-100 bg-indigo-50/50 p-5 dark:border-transparent dark:bg-indigo-500/10">
             <h3 className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
               Other ways to reach me
             </h3>
@@ -65,7 +65,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="rounded-box border border-black/10 p-5 dark:border-white/10">
+          <div className="rounded-box border border-black/10 p-5 dark:border-transparent dark:bg-white/5">
             <h3 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
               What to include
             </h3>
