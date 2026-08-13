@@ -82,14 +82,15 @@ export default function AboutPage() {
           <p>
             I&rsquo;m a software engineer with over a decade of experience
             building and maintaining web-based systems. Most recently, I
-            spent around 11 years at FOUR in Adelaide, where I acted as lead
-            engineer on a bespoke integration engine mapping data between an
-            ERP and a scheduling system, led stakeholder-facing requirements
-            work on a business management solution, built an internal
-            &ldquo;Dashboard Builder&rdquo; tool, led testing and QA
-            practices as the support team&rsquo;s lead engineer, and
-            maintained the technical documentation that keeps a system
-            supportable long after it ships.
+            spent around 11 years at FOUR in Adelaide, where I led the
+            integration engine connecting an ERP to a scheduling
+            system — the kind of project where a bug means the wrong stock
+            numbers on the shop floor, not just a failed test. I also ran
+            stakeholder-facing requirements work on a business management
+            platform, built an internal reporting tool from scratch, and led
+            testing and QA for the support team — plus the unglamorous
+            documentation work that keeps a system supportable long after
+            the person who built it has moved on.
           </p>
           <p>
             Before that, I worked as a web developer, including a full UI/UX

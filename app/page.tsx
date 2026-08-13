@@ -26,8 +26,8 @@ export default function Home() {
             I&rsquo;m Campbell Davis, a freelance web and software developer
             based in Adelaide, working with businesses across Australia. Over
             a decade building, integrating, and rescuing software — including
-            the new wave of AI-generated prototypes that need a professional
-            eye before they can be trusted.
+            the new wave of AI-built prototypes that need a professional
+            review before you bet your business on them.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link

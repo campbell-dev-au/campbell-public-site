@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CTASection({
   heading = "Have a project in mind, or a codebase you're not sure about?",
-  body = "I'm currently available for freelance and contract work.",
+  body = "You'll hear back from me directly — no sales team, no queue, just a straight answer.",
   buttonLabel = "Get in touch",
 }: {
   heading?: string;

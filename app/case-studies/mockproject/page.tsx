@@ -104,8 +104,9 @@ export default function MockProjectCaseStudy() {
             tests.
           </li>
           <li>
-            Adopt PHPStan, PHPMetrics, and WordPress Plugin Check as ongoing
-            quality gates.
+            Adopt PHPStan, PHPMetrics, and WordPress Plugin Check — automated
+            tools that catch this kind of bloat and risk before it ships,
+            rather than after — as ongoing quality gates.
           </li>
           <li>Fix flagged security issues before any production release.</li>
         </ul>

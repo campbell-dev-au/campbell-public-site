@@ -16,7 +16,7 @@ export const services: Service[] = [
     title: "Website Development",
     icon: "website",
     summary:
-      "Fast, modern, maintainable websites built with the same care I'd want for my own business — from marketing sites to internal portals.",
+      "A website that loads fast, looks sharp, and won't need a developer on retainer just to update — from marketing sites to internal portals.",
     description:
       "Whether it's a marketing site, a customer portal, or an internal tool, I build websites using modern tooling that's fast to load and straightforward to maintain — not a bespoke framework only I understand.",
     whatYouGet: [
@@ -44,7 +44,7 @@ export const services: Service[] = [
     title: "Bespoke Software Development",
     icon: "code",
     summary:
-      "Custom systems and integrations, from ERP-to-scheduling data pipelines to full internal platforms.",
+      "Custom systems and integrations that connect the tools you already use, from ERP-to-scheduling data flows to full internal platforms.",
     description:
       "Some problems don't have an off-the-shelf answer. I design and build custom systems and integrations — including connecting existing tools that were never meant to talk to each other — with an emphasis on security and long-term supportability.",
     whatYouGet: [
