@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PhotoFrame from "@/components/PhotoFrame";
 
 export const metadata: Metadata = {
   title: "Case Studies",
@@ -17,8 +18,15 @@ const caseStudies = [
 
 export default function CaseStudiesPage() {
   return (
-    <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
-      <h1 className="text-4xl font-semibold tracking-tight">Case Studies</h1>
+    <div className="px-6 py-12 sm:px-10 sm:py-16">
+      <PhotoFrame
+        src="/images/casestudies-filecabinet.jpg"
+        alt="An open vintage filing cabinet drawer packed with index card records"
+        className="aspect-[4/1]"
+        objectPosition="45% 45%"
+        priority
+      />
+      <h1 className="mt-8 text-4xl font-semibold tracking-tight">Case Studies</h1>
       <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
         A look at how engagements actually play out.
       </p>
@@ -28,7 +36,7 @@ export default function CaseStudiesPage() {
           <Link
             key={cs.slug}
             href={`/case-studies/${cs.slug}`}
-            className="group rounded-xl border border-black/10 p-6 transition-colors hover:border-black/25 dark:border-white/10 dark:hover:border-white/25"
+            className="group rounded-box border border-black/10 bg-white/80 p-6 backdrop-blur-sm transition-colors hover:border-indigo-300 hover:shadow-sm dark:border-white/10 dark:bg-zinc-950/60 dark:hover:border-indigo-400/40"
           >
             <h2 className="text-xl font-semibold tracking-tight">
               {cs.title}
@@ -36,7 +44,7 @@ export default function CaseStudiesPage() {
             <p className="mt-3 text-base leading-7 text-zinc-600 dark:text-zinc-400">
               {cs.summary}
             </p>
-            <span className="mt-4 inline-block text-sm font-medium group-hover:underline">
+            <span className="mt-4 inline-block text-sm font-medium text-indigo-600 group-hover:underline dark:text-indigo-400">
               Read the case study →
             </span>
           </Link>

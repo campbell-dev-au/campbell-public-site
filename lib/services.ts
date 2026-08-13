@@ -1,9 +1,12 @@
+import type { ServiceIconKey } from "@/components/icons";
+
 export type Service = {
   slug: string;
   title: string;
   summary: string;
   description: string;
   whatYouGet: string[];
+  icon: ServiceIconKey;
   link?: { href: string; label: string };
 };
 
@@ -11,6 +14,7 @@ export const services: Service[] = [
   {
     slug: "website-development",
     title: "Website Development",
+    icon: "website",
     summary:
       "Fast, modern, maintainable websites built with the same care I'd want for my own business — from marketing sites to internal portals.",
     description:
@@ -24,6 +28,7 @@ export const services: Service[] = [
   {
     slug: "business-process-improvement",
     title: "Business Process Analysis & Improvement",
+    icon: "process",
     summary:
       "I work with your team to understand how you actually operate, then build the software that removes the manual work.",
     description:
@@ -37,6 +42,7 @@ export const services: Service[] = [
   {
     slug: "bespoke-software-development",
     title: "Bespoke Software Development",
+    icon: "code",
     summary:
       "Custom systems and integrations, from ERP-to-scheduling data pipelines to full internal platforms.",
     description:
@@ -50,6 +56,7 @@ export const services: Service[] = [
   {
     slug: "vibe-code-health-check",
     title: "Vibe-Coded Prototype Review & Health Check Report",
+    icon: "healthcheck",
     summary:
       "A structured, professional review of your AI-generated codebase: architecture, security, testing, and a clear path to production.",
     description:
@@ -65,6 +72,7 @@ export const services: Service[] = [
   {
     slug: "vibe-to-production",
     title: "Vibe-to-Production Development",
+    icon: "rocket",
     summary:
       "I take the prototype your team built with AI tools and turn it into something you can safely run your business on.",
     description:

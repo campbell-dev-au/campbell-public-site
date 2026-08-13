@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f7f6fc;
   --foreground: #171717;
+  --dot-color: rgba(79, 70, 229, 0.35);
+  --wash-1: rgba(99, 102, 241, 0.28);
+  --wash-2: rgba(217, 70, 239, 0.22);
+  --wash-3: rgba(56, 189, 248, 0.16);
+  --radius-box: 2px;
 }
 
 @theme inline {
@@ -12,15 +17,30 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@utility rounded-box {
+  border-radius: var(--radius-box);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0b0a14;
     --foreground: #ededed;
+    --dot-color: rgba(129, 140, 248, 0.22);
+    --wash-1: rgba(99, 102, 241, 0.24);
+    --wash-2: rgba(217, 70, 239, 0.16);
+    --wash-3: rgba(56, 189, 248, 0.12);
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
+  background-image:
+    radial-gradient(var(--dot-color) 1.5px, transparent 1.5px),
+    radial-gradient(900px circle at 6% -5%, var(--wash-1), transparent 55%),
+    radial-gradient(800px circle at 96% 25%, var(--wash-2), transparent 55%),
+    radial-gradient(900px circle at 10% 95%, var(--wash-3), transparent 55%);
+  background-size: 22px 22px, 100% 100%, 100% 100%, 100% 100%;
+  background-attachment: fixed, fixed, fixed, fixed;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
