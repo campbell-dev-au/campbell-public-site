@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import PhotoFrame from "@/components/PhotoFrame";
 import { EmailIcon, GithubIcon, LinkedinIcon } from "@/components/icons";
 import { siteConfig } from "@/lib/site";
 
@@ -14,7 +15,14 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="px-6 py-12 sm:px-10 sm:py-16">
-      <h1 className="text-4xl font-semibold tracking-tight">Contact</h1>
+      <PhotoFrame
+        src="/images/contact-phone.jpg"
+        alt="A modern office desk phone, ready to answer a call"
+        className="aspect-[4/1]"
+        objectPosition="50% 49%"
+        priority
+      />
+      <h1 className="mt-8 text-4xl font-semibold tracking-tight">Contact</h1>
       <p className="mt-4 max-w-xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
         Have a project in mind, or a codebase you&rsquo;re not sure about?
         Let&rsquo;s talk.
