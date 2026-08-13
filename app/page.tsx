@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ServiceCard from "@/components/ServiceCard";
 import CTASection from "@/components/CTASection";
-import { services } from "@/lib/services";
+import { services, serviceGroups } from "@/lib/services";
 
 export default function Home() {
   return (
@@ -62,12 +62,23 @@ export default function Home() {
       </div>
 
       <section className="mt-24">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
-          What I do
-        </h2>
-        <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <ServiceCard key={service.slug} service={service} />
+        <p className="max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
+          Not sure where to start? Pick what sounds like you:
+        </p>
+        <div className="mt-6 flex flex-col gap-10">
+          {serviceGroups.map((group) => (
+            <div key={group.key}>
+              <h2 className="text-lg font-semibold tracking-tight text-balance">
+                {group.heading}
+              </h2>
+              <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {services
+                  .filter((service) => service.group === group.key)
+                  .map((service) => (
+                    <ServiceCard key={service.slug} service={service} />
+                  ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>
