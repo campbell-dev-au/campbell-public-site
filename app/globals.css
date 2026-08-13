@@ -7,7 +7,7 @@
   --wash-1: rgba(99, 102, 241, 0.28);
   --wash-2: rgba(217, 70, 239, 0.22);
   --wash-3: rgba(56, 189, 248, 0.16);
-  --radius-box: 0.375rem;
+  --radius-box: 2px;
 }
 
 @theme inline {
