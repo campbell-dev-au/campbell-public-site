@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CopyrightYear from "@/components/CopyrightYear";
 import { EmailIcon, GithubIcon, LinkedinIcon } from "@/components/icons";
 import { siteConfig } from "@/lib/site";
 
@@ -7,7 +8,7 @@ export default function Footer() {
     <footer className="border-t border-black/30 bg-zinc-900/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl flex-col gap-4 px-6 py-8 text-sm text-zinc-400 sm:flex-row sm:items-center sm:justify-between">
         <p>
-          © {new Date().getFullYear()} {siteConfig.name}. {siteConfig.location}.
+          © <CopyrightYear /> {siteConfig.name}. {siteConfig.location}.
         </p>
         <div className="flex items-center gap-5">
           <a
