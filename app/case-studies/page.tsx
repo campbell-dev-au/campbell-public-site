@@ -5,6 +5,9 @@ import PhotoFrame from "@/components/PhotoFrame";
 export const metadata: Metadata = {
   title: "Case Studies",
   description: "Real engagements, including a full vibe-code health check.",
+  alternates: {
+    canonical: "/case-studies",
+  },
 };
 
 const caseStudies = [

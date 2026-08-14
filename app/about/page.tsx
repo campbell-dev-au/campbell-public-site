@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Over a decade of software engineering experience, now working independently as a freelance developer based in Adelaide.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 const skillGroups = [

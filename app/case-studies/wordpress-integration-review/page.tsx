@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Vibe-Code Health Check: An AI-Built WordPress/WooCommerce Integration",
   description:
     "How a structured health check turned a 35,000-line AI-generated WordPress plugin into a clear, prioritized action plan.",
+  alternates: {
+    canonical: "/case-studies/wordpress-integration-review",
+  },
 };
 
 function Stat({ value, label }: { value: string; label: string }) {

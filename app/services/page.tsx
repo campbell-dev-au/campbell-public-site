@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Services",
   description:
     "Website development, business process improvement, bespoke software, and Vibe-Code Health Checks — five ways I can help.",
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 export default function ServicesPage() {

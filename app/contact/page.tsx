@@ -7,6 +7,9 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Get in touch about a project or a codebase you're not sure about.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 // Phone number from the CV is intentionally omitted pending confirmation
