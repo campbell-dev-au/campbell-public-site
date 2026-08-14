@@ -25,7 +25,7 @@ export default function ContactPage() {
       <h1 className="mt-8 text-4xl font-semibold tracking-tight">Contact</h1>
       <p className="mt-4 max-w-xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
         Have a project in mind, or a codebase you&rsquo;re not sure about?
-        Let&rsquo;s talk.
+        I&rsquo;d love to hear from you.
       </p>
 
       <div className="mt-10 lg:grid lg:grid-cols-[1fr_320px] lg:gap-12">
