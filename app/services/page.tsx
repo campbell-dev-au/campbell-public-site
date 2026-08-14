@@ -28,28 +28,34 @@ export default function ServicesPage() {
       </p>
 
       <div className="mt-16 flex flex-col gap-16">
-        {serviceGroups.map((group) => (
-          <div key={group.key}>
-            <h2 className="text-2xl font-semibold tracking-tight text-balance">
-              {group.heading}
-            </h2>
-            <div className="mt-8 flex flex-col gap-16">
-              {services
-                .filter((service) => service.group === group.key)
-                .map((service, index) => {
+        {serviceGroups.map((group) => {
+          const groupServices = services.filter(
+            (service) => service.group === group.key
+          );
+          return (
+            <div key={group.key}>
+              <div className="sticky top-16 z-10 -mx-1 bg-white/95 px-1 py-3 backdrop-blur-sm dark:bg-zinc-900/95">
+                <p className="font-mono text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-500">
+                  The situation
+                </p>
+                <h2 className="mt-1 text-xl font-medium tracking-tight text-balance text-zinc-600 dark:text-zinc-400">
+                  {group.heading}
+                </h2>
+              </div>
+              <div className="mt-8 flex flex-col gap-16">
+                {groupServices.map((service) => {
                   const Icon = serviceIcons[service.icon];
                   return (
                     <section
                       key={service.slug}
                       id={service.slug}
-                      className={`scroll-mt-24 lg:grid lg:grid-cols-[1fr_320px] lg:gap-12 ${
-                        index === 0
-                          ? ""
-                          : "border-t border-black/10 pt-10 dark:border-black/30"
-                      }`}
+                      className="scroll-mt-36 border-l-2 border-indigo-100 pl-6 dark:border-indigo-500/20 lg:grid lg:grid-cols-[1fr_320px] lg:gap-12"
                     >
                       <div>
-                        <div className="flex items-center gap-4">
+                        <p className="font-mono text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
+                          Service
+                        </p>
+                        <div className="mt-2 flex items-center gap-4">
                           <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-box bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400">
                             <Icon className="h-5 w-5" />
                           </div>
@@ -90,9 +96,10 @@ export default function ServicesPage() {
                     </section>
                   );
                 })}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       <div className="mt-24">
