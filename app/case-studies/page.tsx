@@ -1,20 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PhotoFrame from "@/components/PhotoFrame";
+import { caseStudies } from "@/lib/case-studies";
 
 export const metadata: Metadata = {
   title: "Case Studies",
   description: "Real engagements, including a full vibe-code health check.",
 };
-
-const caseStudies = [
-  {
-    slug: "wordpress-integration-review",
-    title: "Vibe-Code Health Check: An AI-Built WordPress/WooCommerce Integration",
-    summary:
-      "A structured assessment of a 35,000-line AI-generated plugin, including architecture, testing strategy, and security recommendations.",
-  },
-];
 
 export default function CaseStudiesPage() {
   return (
