@@ -1,8 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import ServiceCard from "@/components/ServiceCard";
-import CTASection from "@/components/CTASection";
-import { services, serviceGroups } from "@/lib/services";
 
 export default function Home() {
   return (
@@ -17,96 +14,113 @@ export default function Home() {
           className="pointer-events-none absolute -left-24 top-32 h-72 w-72 rounded-full bg-violet-200/40 blur-3xl dark:bg-violet-700/10"
         />
         <section className="relative flex flex-col-reverse items-start gap-10 p-8 sm:flex-row sm:items-center sm:p-10">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            Software that ships — including the code AI wrote and nobody has
-            reviewed.
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            I&rsquo;m Campbell Davis, a freelance web and software developer
-            based in Adelaide, working with businesses across Australia. Over
-            a decade building, integrating, and rescuing software — including
-            the new wave of AI-generated prototypes that need a professional
-            eye before they can be trusted.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-box bg-gradient-to-br from-indigo-600 to-fuchsia-600 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
-            >
-              Book a Vibe-Code Health Check
-            </Link>
-            <Link
-              href="/case-studies"
-              className="inline-flex items-center justify-center rounded-box border border-black/15 px-6 py-3 text-sm font-medium transition-colors hover:border-black/30 dark:border-black/30 dark:bg-white/5 dark:hover:bg-white/10"
-            >
-              See my work
-            </Link>
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
+              Freelance developer — Adelaide
+            </p>
+            <h1 className="mt-2 text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
+              Software you can actually trust — including the parts an AI
+              wrote.
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+              I&rsquo;m Campbell Davis. I build new software, and I fix the
+              AI-generated kind nobody&rsquo;s checked yet. One person, full
+              accountability, a decade doing this properly.
+            </p>
+            <p className="mt-6 text-sm text-zinc-500">
+              Recently: found the gaps in a 35,000-line AI-built plugin before
+              it shipped.{" "}
+              <Link
+                href="/case-studies/wordpress-integration-review"
+                className="font-medium text-indigo-600 underline underline-offset-4 dark:text-indigo-400"
+              >
+                Read the case study →
+              </Link>
+            </p>
           </div>
-          <p className="mt-4 text-sm text-zinc-500">
-            Recently: reviewed a 35,000-line AI-built WordPress integration
-            before launch.
-          </p>
-        </div>
-        <div className="relative flex-shrink-0">
-          <div
-            aria-hidden
-            className="absolute -inset-2 rounded-full bg-gradient-to-br from-indigo-500 to-fuchsia-500 opacity-70 blur-md"
-          />
-          <Image
-            src="/images/campbell-davis.jpg"
-            alt="Campbell Davis"
-            width={192}
-            height={192}
-            priority
-            className="relative h-32 w-32 rounded-full object-cover ring-4 ring-white sm:h-48 sm:w-48 dark:ring-zinc-950"
-          />
-        </div>
+          <div className="relative flex-shrink-0">
+            <div
+              aria-hidden
+              className="absolute -inset-2 rounded-full bg-gradient-to-br from-indigo-500 to-fuchsia-500 opacity-70 blur-md"
+            />
+            <Image
+              src="/images/campbell-davis.jpg"
+              alt="Campbell Davis"
+              width={192}
+              height={192}
+              priority
+              className="relative h-32 w-32 rounded-full object-cover ring-4 ring-white sm:h-48 sm:w-48 dark:ring-zinc-950"
+            />
+          </div>
         </section>
       </div>
 
       <section className="mt-24">
-        <p className="max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
-          Not sure where to start? Pick what sounds like you:
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+          So — which one&rsquo;s you?
         </p>
-        <div className="mt-6 flex flex-col gap-10">
-          {serviceGroups.map((group) => (
-            <div key={group.key}>
-              <h2 className="text-lg font-semibold tracking-tight text-balance">
-                {group.heading}
-              </h2>
-              <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                {services
-                  .filter((service) => service.group === group.key)
-                  .map((service) => (
-                    <ServiceCard key={service.slug} service={service} />
-                  ))}
-              </div>
-            </div>
-          ))}
+        <div className="mt-6 grid gap-5 sm:grid-cols-2">
+          <div className="flex flex-col gap-4 rounded-box border border-black/10 bg-gradient-to-br from-indigo-50 to-white p-7 dark:border-black/30 dark:from-indigo-500/10 dark:to-transparent">
+            <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
+              Already built something
+            </p>
+            <h2 className="text-xl font-semibold tracking-tight text-balance">
+              An AI got you to a demo.
+            </h2>
+            <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+              Now you need to know if it&rsquo;s safe to run the business on
+              — or someone who can make it that way. A structured health
+              check tells you exactly what&rsquo;s solid, what isn&rsquo;t,
+              and what to do next.
+            </p>
+            <p className="text-sm text-zinc-500">
+              Proof: turned that 35,000-line AI-built WordPress plugin into a
+              clear, prioritized action plan before launch.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-auto inline-flex w-fit items-center justify-center rounded-box bg-gradient-to-br from-indigo-600 to-fuchsia-600 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+            >
+              Book a Health Check
+            </Link>
+          </div>
+          <div className="flex flex-col gap-4 rounded-box border border-black/10 bg-gradient-to-br from-fuchsia-50 to-white p-7 dark:border-black/30 dark:from-fuchsia-500/10 dark:to-transparent">
+            <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
+              Starting from scratch
+            </p>
+            <h2 className="text-xl font-semibold tracking-tight text-balance">
+              Nothing built yet — or still on a whiteboard.
+            </h2>
+            <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+              I design and build it properly from the first commit: websites,
+              internal tools, custom integrations. Modern tooling,
+              handover-ready code, nothing only I can maintain.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-auto inline-flex w-fit items-center justify-center rounded-box bg-gradient-to-br from-indigo-600 to-fuchsia-600 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+            >
+              Start a Project
+            </Link>
+          </div>
         </div>
-      </section>
 
-      <section className="mt-24 rounded-box border border-indigo-100 bg-indigo-50/50 p-8 dark:border-black/30 dark:bg-indigo-500/10 sm:p-10">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
-          Case study
-        </h2>
-        <p className="mt-4 max-w-2xl text-lg leading-8">
-          35,000 lines, 190 classes, and a WordPress plugin that needed a
-          second opinion before going live. See how a structured health check
-          turned an AI-built integration into a clear, prioritized action
-          plan.
-        </p>
-        <Link
-          href="/case-studies/wordpress-integration-review"
-          className="mt-5 inline-flex items-center text-sm font-medium text-indigo-600 underline underline-offset-4 dark:text-indigo-400"
-        >
-          Read the case study →
-        </Link>
-      </section>
-
-      <section className="mt-24">
-        <CTASection />
+        <div className="mt-5 flex flex-wrap items-baseline gap-x-2 gap-y-1 rounded-box border border-dashed border-black/15 p-5 text-sm text-zinc-600 dark:border-white/15 dark:text-zinc-400">
+          <span className="font-semibold text-zinc-900 dark:text-zinc-100">
+            Or maybe it&rsquo;s not a code problem at all.
+          </span>
+          <span>
+            If your team&rsquo;s buried in manual steps and spreadsheets,
+            that&rsquo;s a process problem before it&rsquo;s a software one —
+            I fix those too.
+          </span>
+          <Link
+            href="/services#business-process-improvement"
+            className="font-semibold text-indigo-600 hover:underline dark:text-indigo-400"
+          >
+            See how →
+          </Link>
+        </div>
       </section>
     </div>
   );
