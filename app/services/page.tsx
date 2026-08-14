@@ -23,7 +23,7 @@ export default function ServicesPage() {
       />
       <h1 className="mt-8 text-4xl font-semibold tracking-tight">Services</h1>
       <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-        Start with what&rsquo;s actually going on, and I&rsquo;ll point you to
+        Start with the problem that brought you here, and I&rsquo;ll point you to
         the right service.
       </p>
 
