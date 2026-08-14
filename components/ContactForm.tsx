@@ -1,12 +1,22 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 
 type Status = "idle" | "submitting" | "success" | "error";
+
+const fieldClassName =
+  "rounded-box border border-black/15 bg-white/80 px-3 py-2 text-sm backdrop-blur-sm focus:border-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 dark:border-black/30 dark:bg-white/5 dark:focus:border-indigo-400 dark:focus-visible:outline-indigo-400";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const successRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    if (status === "success") {
+      successRef.current?.focus();
+    }
+  }, [status]);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -38,7 +48,12 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <p className="max-w-md text-base leading-7 text-zinc-700 dark:text-zinc-300">
+      <p
+        ref={successRef}
+        tabIndex={-1}
+        role="status"
+        className="max-w-md text-base leading-7 text-zinc-700 dark:text-zinc-300"
+      >
         Thanks — your message is on its way. I&rsquo;ll get back to you soon.
       </p>
     );
@@ -65,7 +80,7 @@ export default function ContactForm() {
           name="name"
           type="text"
           required
-          className="rounded-box border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-black/30 dark:bg-white/5 dark:focus:border-indigo-400"
+          className={fieldClassName}
         />
       </div>
 
@@ -78,7 +93,7 @@ export default function ContactForm() {
           name="email"
           type="email"
           required
-          className="rounded-box border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-black/30 dark:bg-white/5 dark:focus:border-indigo-400"
+          className={fieldClassName}
         />
       </div>
 
@@ -91,18 +106,20 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
-          className="rounded-box border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-black/30 dark:bg-white/5 dark:focus:border-indigo-400"
+          className={fieldClassName}
         />
       </div>
 
       {status === "error" && (
-        <p className="text-sm text-red-600 dark:text-red-400">{errorMessage}</p>
+        <p role="alert" className="text-sm text-red-600 dark:text-red-400">
+          {errorMessage}
+        </p>
       )}
 
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex w-fit items-center justify-center rounded-box bg-gradient-to-br from-indigo-600 to-fuchsia-600 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-60"
+        className="inline-flex w-fit items-center justify-center rounded-box bg-gradient-to-br from-indigo-600 to-fuchsia-600 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 disabled:opacity-60 dark:focus-visible:outline-indigo-400"
       >
         {status === "submitting" ? "Sending…" : "Send message"}
       </button>

@@ -111,9 +111,9 @@ export default function AboutPage() {
         </div>
 
         <div className="mt-8 h-fit rounded-box border border-indigo-100 bg-indigo-50/50 p-5 dark:border-black/30 dark:bg-indigo-500/10 lg:mt-0">
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
             Quick facts
-          </h3>
+          </h2>
           <dl className="mt-3 flex flex-col gap-3 text-sm">
             <div>
               <dt className="text-zinc-500">Based in</dt>

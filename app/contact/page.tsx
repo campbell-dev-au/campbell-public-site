@@ -33,9 +33,9 @@ export default function ContactPage() {
 
         <div className="mt-10 flex h-fit flex-col gap-6 lg:mt-0">
           <div className="rounded-box border border-indigo-100 bg-indigo-50/50 p-5 dark:border-black/30 dark:bg-indigo-500/10">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
               Other ways to reach me
-            </h3>
+            </h2>
             <div className="mt-3 flex flex-col gap-2 text-sm font-medium">
               <a
                 href={`mailto:${siteConfig.email}`}
@@ -66,9 +66,9 @@ export default function ContactPage() {
           </div>
 
           <div className="rounded-box border border-black/10 p-5 dark:border-black/30 dark:bg-white/5">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
               What to include
-            </h3>
+            </h2>
             <ul className="mt-3 flex flex-col gap-2 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
               <li className="flex gap-3">
                 <span aria-hidden className="text-indigo-400">
