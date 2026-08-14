@@ -8,6 +8,9 @@ export const siteConfig = {
   linkedin: "https://linkedin.com/in/campbell-davis",
   github: "https://github.com/campbell-dev-au",
   location: "Adelaide, SA",
+  // Single source of truth for CTASection's default availability copy —
+  // update this date, not the copy, when the answer changes.
+  availableFrom: "2026-09-01",
 };
 
 export const nav = [

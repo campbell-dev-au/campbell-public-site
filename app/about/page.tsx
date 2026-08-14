@@ -40,10 +40,10 @@ const skillGroups = [
 export default function AboutPage() {
   return (
     <div className="px-6 py-12 sm:px-10 sm:py-16">
-      <div className="relative overflow-hidden rounded-box border border-black/10 bg-indigo-50/40 shadow-sm dark:border-black/30 dark:bg-indigo-500/10">
+      <div className="relative overflow-hidden rounded-box border border-black/30 bg-indigo-500/10 shadow-sm">
         <div
           aria-hidden
-          className="absolute inset-0 opacity-70 dark:opacity-50"
+          className="absolute inset-0 opacity-50"
           style={{
             backgroundImage:
               "radial-gradient(var(--dot-color) 1.5px, transparent 1.5px)",
@@ -52,11 +52,11 @@ export default function AboutPage() {
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-gradient-to-br from-indigo-300/50 to-fuchsia-300/30 blur-3xl dark:from-indigo-600/20 dark:to-fuchsia-600/10"
+          className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-gradient-to-br from-indigo-600/20 to-fuchsia-600/10 blur-3xl"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-violet-200/40 blur-3xl dark:bg-violet-700/10"
+          className="pointer-events-none absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-violet-700/10 blur-3xl"
         />
         <div className="relative flex items-center gap-6 p-8 sm:p-10">
           <div className="relative flex-shrink-0">
@@ -70,7 +70,7 @@ export default function AboutPage() {
               width={112}
               height={112}
               priority
-              className="relative h-28 w-28 rounded-full object-cover ring-4 ring-white dark:ring-zinc-950"
+              className="relative h-28 w-28 rounded-full object-cover ring-4 ring-zinc-950"
             />
           </div>
           <h1 className="text-4xl font-semibold tracking-tight">About Campbell</h1>
@@ -78,7 +78,7 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-8 lg:grid lg:grid-cols-[1fr_280px] lg:gap-12">
-        <div className="flex flex-col gap-5 text-base leading-7 text-zinc-700 dark:text-zinc-300">
+        <div className="flex flex-col gap-5 text-base leading-7 text-zinc-300">
           <p>
             I&rsquo;m a software engineer with over a decade of experience
             building and maintaining web-based systems. I cut my teeth
@@ -110,32 +110,32 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="mt-8 h-fit rounded-box border border-indigo-100 bg-indigo-50/50 p-5 dark:border-black/30 dark:bg-indigo-500/10 lg:mt-0">
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
+        <div className="mt-8 h-fit rounded-box border border-black/30 bg-indigo-500/10 p-5 lg:mt-0">
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-indigo-400">
             Quick facts
           </h3>
           <dl className="mt-3 flex flex-col gap-3 text-sm">
             <div>
               <dt className="text-zinc-500">Based in</dt>
-              <dd className="text-zinc-800 dark:text-zinc-200">
+              <dd className="text-zinc-200">
                 {siteConfig.location} · remote across Australia
               </dd>
             </div>
             <div>
               <dt className="text-zinc-500">Experience</dt>
-              <dd className="text-zinc-800 dark:text-zinc-200">
+              <dd className="text-zinc-200">
                 11+ years in software engineering
               </dd>
             </div>
             <div>
               <dt className="text-zinc-500">Availability</dt>
-              <dd className="text-zinc-800 dark:text-zinc-200">
+              <dd className="text-zinc-200">
                 Freelance &amp; contract work
               </dd>
             </div>
             <div>
               <dt className="text-zinc-500">Background</dt>
-              <dd className="text-zinc-800 dark:text-zinc-200">
+              <dd className="text-zinc-200">
                 Law (1st Class Hons) &amp; International Studies
               </dd>
             </div>
@@ -155,7 +155,7 @@ export default function AboutPage() {
                 {group.items.map((item) => (
                   <li
                     key={item}
-                    className="rounded-box border border-indigo-100 bg-indigo-50/50 px-3 py-1 text-sm text-indigo-900 dark:border-black/30 dark:bg-indigo-500/10 dark:text-indigo-200"
+                    className="rounded-box border border-black/30 bg-indigo-500/10 px-3 py-1 text-sm text-indigo-200"
                   >
                     {item}
                   </li>
@@ -171,7 +171,7 @@ export default function AboutPage() {
           href={siteConfig.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-indigo-600 underline underline-offset-4 dark:text-indigo-400"
+          className="text-indigo-400 underline underline-offset-4"
         >
           LinkedIn
         </a>
@@ -179,7 +179,7 @@ export default function AboutPage() {
           href={siteConfig.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-indigo-600 underline underline-offset-4 dark:text-indigo-400"
+          className="text-indigo-400 underline underline-offset-4"
         >
           GitHub
         </a>
