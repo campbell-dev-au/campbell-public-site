@@ -1,14 +1,31 @@
+"use client";
+
 import Link from "next/link";
+import { siteConfig } from "@/lib/site";
+
+function defaultAvailabilityBody() {
+  const availableFrom = new Date(siteConfig.availableFrom);
+  if (new Date() >= availableFrom) {
+    return "Currently taking on new projects.";
+  }
+  const label = availableFrom.toLocaleDateString("en-AU", {
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+  return `Taking on new projects from ${label}.`;
+}
 
 export default function CTASection({
   heading = "Have a project in mind, or a codebase you're not sure about?",
-  body = "Taking on new projects from September 2026.",
+  body,
   buttonLabel = "Get in touch",
 }: {
   heading?: string;
   body?: string;
   buttonLabel?: string;
 }) {
+  const resolvedBody = body ?? defaultAvailabilityBody();
   return (
     <section className="relative overflow-hidden rounded-box bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 px-8 py-12 text-center">
       <div
@@ -22,7 +39,12 @@ export default function CTASection({
       <h2 className="relative text-2xl font-semibold tracking-tight text-white sm:text-3xl">
         {heading}
       </h2>
-      <p className="relative mx-auto mt-3 max-w-xl text-indigo-100">{body}</p>
+      <p
+        className="relative mx-auto mt-3 max-w-xl text-indigo-100"
+        suppressHydrationWarning
+      >
+        {resolvedBody}
+      </p>
       <Link
         href="/contact"
         className="relative mt-6 inline-flex items-center justify-center rounded-box bg-white px-6 py-3 text-sm font-medium text-indigo-700 transition-colors hover:bg-indigo-50"
