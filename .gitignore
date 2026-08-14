@@ -43,3 +43,5 @@ next-env.d.ts
 
 # source documents (CV, client reports) — not for the public repo
 docs/
+
+.claude/
