@@ -12,7 +12,7 @@ const caseStudies = [
     slug: "wordpress-integration-review",
     title: "Vibe-Code Health Check: An AI-Built WordPress/WooCommerce Integration",
     summary:
-      "A structured assessment of a 35,000-line AI-generated plugin — architecture, testing strategy, and security recommendations.",
+      "A structured assessment of a 35,000-line AI-generated plugin, including architecture, testing strategy, and security recommendations.",
   },
 ];
 

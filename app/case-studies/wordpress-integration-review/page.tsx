@@ -47,9 +47,6 @@ export default function WordpressIntegrationReviewCaseStudy() {
       <h1 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
         An AI-Built WordPress/WooCommerce Integration
       </h1>
-      <p className="mt-3 text-sm text-zinc-500">
-        Details anonymised at the client&rsquo;s request.
-      </p>
 
       <PhotoFrame
         src="/images/casestudy-pos-system.jpg"
@@ -58,11 +55,10 @@ export default function WordpressIntegrationReviewCaseStudy() {
         priority
       />
 
-      <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
+      <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3">
         <Stat value="35,000" label="lines of code" />
         <Stat value="190" label="classes" />
-        <Stat value="0" label="functional tests, before" />
-        <Stat value="3" label="tools recommended" />
+        <Stat value="4" label="tools recommended" />
       </div>
 
       <Section title="The situation">
@@ -85,9 +81,9 @@ export default function WordpressIntegrationReviewCaseStudy() {
 
       <Section title="What was found">
         <p>
-          A surprisingly large codebase — 35,000 lines across 190 classes —
+          A surprisingly large codebase (35,000 lines across 190 classes)
           for the problem it solved. That&rsquo;s typical of AI-generated
-          code, which favors duplication over abstraction and rarely cleans
+          code, which favours duplication over abstraction and rarely cleans
           up dead code. Test coverage told a similar story: strong unit test
           coverage, but no functional or business-facing tests. Several
           security concerns were also flagged.
@@ -98,8 +94,7 @@ export default function WordpressIntegrationReviewCaseStudy() {
         <ul className="flex flex-col gap-3">
           <li>
             Keep the current architecture unless significant further feature
-            growth is planned — a full rewrite wasn&rsquo;t justified by the
-            actual risk.
+            growth is planned, in which case a more decoupled architecture was recommended.
           </li>
           <li>
             Add BDD-style functional tests (Gherkin) so business requirements
@@ -114,15 +109,15 @@ export default function WordpressIntegrationReviewCaseStudy() {
         </ul>
       </Section>
 
-      <Section title="An illustrative example">
+      <Section title="Functional tests">
         <p>
           Part of the recommendation was to complement the existing unit
-          tests with functional tests written in Gherkin — readable by
+          tests with functional tests written in Gherkin syntax; these would be readable by
           both business stakeholders and developers, and directly testable:
         </p>
         <pre className="mt-4 overflow-x-auto rounded-box bg-zinc-950 p-5 text-sm leading-6 text-zinc-100 dark:bg-black">
           <code>{`Feature: ERP product sync
-  Shop operators need products from Options ERP to land correctly in WooCommerce.
+  Shop operators need products from the Inventory System to land correctly in WooCommerce.
   Scenario: Simple online product publishes with price and stock
     Given an ERP product with stockcode "TEST-001"
     And its description is "Test Widget"
@@ -141,10 +136,10 @@ export default function WordpressIntegrationReviewCaseStudy() {
 
       <Section title="The outcome">
         <p>
-          The client walked away with clarity and a prioritized, cost-aware
+          The client walked away with clarity and a prioritised, cost-aware
           action plan — not a rewrite they didn&rsquo;t need. That&rsquo;s
-          the shape of the Health Check and Vibe-to-Production offerings:
-          honest assessment first, then targeted fixes.
+          the approach of the Health Check and Vibe-to-Production offerings:
+          honest assessment first, then targeted improvements to maximise impact.
         </p>
       </Section>
 
