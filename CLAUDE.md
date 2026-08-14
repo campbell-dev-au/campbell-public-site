@@ -18,9 +18,8 @@ npm run build         # production build (also type-checks)
 npm run start          # serve the production build
 npm run lint            # eslint
 npx tsc --noEmit         # type-check only, no build
+npm test                  # vitest — currently covers app/api/contact/route.ts
 ```
-
-There is no test suite.
 
 ## Architecture
 
@@ -30,7 +29,7 @@ There is no test suite.
 - **Content lives in code, not a CMS.** `lib/services.ts` is the single source of truth for the five service offerings (title, summary, description, "what you get" bullets) — both the home page teaser cards and the full `/services` page render from this array. `lib/site.ts` holds site-wide constants (name, email, social links, `siteConfig.url` for metadata/OG tags).
 - **`/services` is one page, not five.** Each service renders as an anchored section (`#<slug>`) rather than a separate route. Split a service into its own page only if it needs dedicated SEO — don't do it preemptively.
 - **Case studies:** `/case-studies` is an index (currently one entry, hardcoded in that page); `/case-studies/mockproject` is the flagship write-up of a real (anonymized) vibe-code health check engagement, used as the proof point for the health-check and vibe-to-production services.
-- **Contact form sends via Porkbun-hosted SMTP, not a third-party email API.** `components/ContactForm.tsx` posts to `app/api/contact/route.ts`, which sends through Nodemailer using the `hello@campbelldavis.com.au` mailbox hosted by Porkbun (`SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, all required env vars — see `.env.example`). Chosen over a transactional email API (e.g. Resend) because volume is low and the destination is Campbell's own mailbox, so the usual third-party deliverability/account-setup tradeoff wasn't worth it. `CONTACT_TO_EMAIL` (optional, falls back to `SMTP_USER`) can route submissions to a separate inbox if the mail provider supports sub-addressing. The form has a hidden honeypot field (`company`) for basic bot filtering — real users never see or fill it.
+- **Contact form sends via Porkbun-hosted SMTP, not a third-party email API.** `components/ContactForm.tsx` posts to `app/api/contact/route.ts`, which sends through Nodemailer using the `hello@campbelldavis.com.au` mailbox hosted by Porkbun (`SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, all required env vars — see `.env.example`). Chosen over a transactional email API (e.g. Resend) because volume is low and the destination is Campbell's own mailbox, so the usual third-party deliverability/account-setup tradeoff wasn't worth it. `CONTACT_TO_EMAIL` (optional, falls back to `SMTP_USER`) can route submissions to a separate inbox if the mail provider supports sub-addressing. The form has a hidden honeypot field (`company`) for basic bot filtering — real users never see or fill it. `lib/rate-limit.ts` adds a per-IP in-memory rate limit (5 requests/minute) in front of the route's validation — state is per lambda instance and resets on cold start, an accepted tradeoff given the low traffic this form gets; it also gates honeypot-triggered fake successes, not just real sends, so the honeypot response can't be used to probe around the limiter.
 - **Shared chrome** (`Header`, `Footer`) is wired into `app/layout.tsx`; page components under `app/**/page.tsx` render only their own content.
 - **`siteConfig.url`** in `lib/site.ts` is `https://campbelldavis.com.au`, the site's real domain (registered via Porkbun) — it feeds `metadataBase`, the sitemap, and robots.txt.
 - The CV lists a mobile number that is deliberately **not** published anywhere on the site pending confirmation — check `app/contact/page.tsx` before adding it.

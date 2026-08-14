@@ -1,7 +1,18 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { checkRateLimit, rateLimitKeyFromHeaders } from "@/lib/rate-limit";
 
 export async function POST(request: Request) {
+  const rateLimitKey = rateLimitKeyFromHeaders(request.headers);
+  const { allowed, retryAfterSeconds } = checkRateLimit(rateLimitKey);
+
+  if (!allowed) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again shortly." },
+      { status: 429, headers: { "Retry-After": String(retryAfterSeconds) } },
+    );
+  }
+
   const body = await request.json().catch(() => null);
 
   if (!body) {
