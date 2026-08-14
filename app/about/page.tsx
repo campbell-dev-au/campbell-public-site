@@ -73,7 +73,7 @@ export default function AboutPage() {
               className="relative h-28 w-28 rounded-full object-cover ring-4 ring-white dark:ring-zinc-950"
             />
           </div>
-          <h1 className="text-4xl font-semibold tracking-tight">About</h1>
+          <h1 className="text-4xl font-semibold tracking-tight">About Campbell</h1>
         </div>
       </div>
 
@@ -81,15 +81,12 @@ export default function AboutPage() {
         <div className="flex flex-col gap-5 text-base leading-7 text-zinc-700 dark:text-zinc-300">
           <p>
             I&rsquo;m a software engineer with over a decade of experience
-            building and maintaining web-based systems. Most recently, I
-            spent around 11 years at FOUR in Adelaide, where I acted as lead
-            engineer on a bespoke integration engine mapping data between an
-            ERP and a scheduling system, led stakeholder-facing requirements
-            work on a business management solution, built an internal
-            &ldquo;Dashboard Builder&rdquo; tool, led testing and QA
-            practices as the support team&rsquo;s lead engineer, and
-            maintained the technical documentation that keeps a system
-            supportable long after it ships.
+            building and maintaining web-based systems. I cut my teeth
+            as part of a tech startup in Adelaide, where my responsibilities
+            included requirements gathering, scope-writing, solution-design,
+            programming, project management, quality assurance, change management...
+            and basically anything else that might be needed to make sure a
+            given software project was successful.
           </p>
           <p>
             Before that, I worked as a web developer, including a full UI/UX
@@ -101,16 +98,15 @@ export default function AboutPage() {
             Australia.
           </p>
           <p>
-            Before software, I studied law (1st Class Honours) and
-            international studies — it&rsquo;s part of why I care about clear
-            requirements, clean documentation, and not overselling a fix
-            nobody asked for.
+            Before software, I studied Law (1st Class Honours) and
+            International Studies, an unusual background, but one which helped
+            me understand that good code is only a small part of a successful
+            project.
           </p>
           <p>
-            I also use AI coding tools daily in my own work — Cursor, Claude,
-            Gemini — which is exactly why the health-check offering exists:
-            hands-on familiarity with both what these tools are good at, and
-            where they leave gaps.
+            I use AI coding tools daily in my own work, which is why my
+            health-check offering exists. I have hands-on familiarity with
+            both what these tools are good at, and where they leave gaps.
           </p>
         </div>
 
