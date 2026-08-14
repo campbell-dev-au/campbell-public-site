@@ -69,7 +69,8 @@ export async function POST(request: Request) {
       text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
     });
   } catch (error) {
-    console.error("Failed to send contact form email:", error);
+    const { message, responseCode } = error as { message?: string; responseCode?: number };
+    console.error("Failed to send contact form email:", { message, responseCode });
     return NextResponse.json(
       { error: "Something went wrong sending your message. Please email me directly." },
       { status: 500 },
