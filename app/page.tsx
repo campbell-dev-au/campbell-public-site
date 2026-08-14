@@ -15,17 +15,16 @@ export default function Home() {
         />
         <section className="relative flex flex-col-reverse items-start gap-10 p-8 sm:flex-row sm:items-center sm:p-10">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
-              Freelance developer — Adelaide
+            <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600">
+              Freelance developer | Adelaide
             </p>
             <h1 className="mt-2 text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
-              Software you can actually trust — including the parts an AI
-              wrote.
+              Software you can trust... including the parts an AI wrote.
             </h1>
             <p className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
               I&rsquo;m Campbell Davis. I build new software, and I fix the
               AI-generated kind nobody&rsquo;s checked yet. One person, full
-              accountability, a decade doing this properly.
+              accountability, and over a decade spent building software that works.
             </p>
             <p className="mt-6 text-sm text-zinc-500">
               Recently: found the gaps in a 35,000-line AI-built plugin before
@@ -57,7 +56,7 @@ export default function Home() {
 
       <section className="mt-24">
         <p className="text-sm text-zinc-600 dark:text-zinc-400">
-          So — which one&rsquo;s you?
+          Where is your project right now?
         </p>
         <div className="mt-6 grid gap-5 sm:grid-cols-2">
           <div className="flex flex-col gap-4 rounded-box border border-black/10 bg-gradient-to-br from-indigo-50 to-white p-7 dark:border-black/30 dark:from-indigo-500/10 dark:to-transparent">
@@ -65,17 +64,12 @@ export default function Home() {
               Already built something
             </p>
             <h2 className="text-xl font-semibold tracking-tight text-balance">
-              An AI got you to a demo.
+              AI got you to a demo.
             </h2>
             <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-              Now you need to know if it&rsquo;s safe to run the business on
-              — or someone who can make it that way. A structured health
-              check tells you exactly what&rsquo;s solid, what isn&rsquo;t,
-              and what to do next.
-            </p>
-            <p className="text-sm text-zinc-500">
-              Proof: turned that 35,000-line AI-built WordPress plugin into a
-              clear, prioritized action plan before launch.
+              Now you need to know if it&rsquo;s safe to run the business on.
+              A structured health check tells you exactly what&rsquo;s solid,
+              what isn&rsquo;t, and what to do next.
             </p>
             <Link
               href="/contact"
@@ -89,10 +83,10 @@ export default function Home() {
               Starting from scratch
             </p>
             <h2 className="text-xl font-semibold tracking-tight text-balance">
-              Nothing built yet — or still on a whiteboard.
+              Still on the whiteboard.
             </h2>
             <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-              I design and build it properly from the first commit: websites,
+              I design and build software with care: websites,
               internal tools, custom integrations. Modern tooling,
               handover-ready code, nothing only I can maintain.
             </p>
@@ -111,8 +105,8 @@ export default function Home() {
           </span>
           <span>
             If your team&rsquo;s buried in manual steps and spreadsheets,
-            that&rsquo;s a process problem before it&rsquo;s a software one —
-            I fix those too.
+            that&rsquo;s a process problem before it&rsquo;s a software one.
+            I help here too.
           </span>
           <Link
             href="/services#business-process-improvement"
