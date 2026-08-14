@@ -17,9 +17,13 @@ npm run dev          # dev server (Turbopack) — picks a free port if 3000 is t
 npm run build         # production build (also type-checks)
 npm run start          # serve the production build
 npm run lint            # eslint
-npx tsc --noEmit         # type-check only, no build
+npm run typecheck        # tsc --noEmit — type-check only, no build
 npm test                  # vitest — currently covers app/api/contact/route.ts
 ```
+
+## CI
+
+`.github/workflows/ci.yml` runs lint, typecheck, and build on every push and pull request against `main`. Dependabot (`.github/dependabot.yml`) checks weekly for updates to `next`, `nodemailer`, and GitHub Actions.
 
 ## Architecture
 
