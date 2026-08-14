@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 
 function Stat({ value, label }: { value: string; label: string }) {
   return (
-    <div className="rounded-box border border-indigo-100 bg-indigo-50/50 p-5 dark:border-black/30 dark:bg-indigo-500/10">
-      <p className="text-3xl font-semibold tracking-tight text-indigo-600 dark:text-indigo-400">
+    <div className="rounded-box border border-black/30 bg-indigo-500/10 p-5">
+      <p className="text-3xl font-semibold tracking-tight text-indigo-400">
         {value}
       </p>
-      <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{label}</p>
+      <p className="mt-1 text-sm text-zinc-400">{label}</p>
     </div>
   );
 }
@@ -31,7 +31,7 @@ function Section({
       <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
         {title}
       </h2>
-      <div className="mt-3 max-w-2xl text-base leading-7 text-zinc-700 dark:text-zinc-300">
+      <div className="mt-3 max-w-2xl text-base leading-7 text-zinc-300">
         {children}
       </div>
     </section>
@@ -115,7 +115,7 @@ export default function WordpressIntegrationReviewCaseStudy() {
           tests with functional tests written in Gherkin syntax; these would be readable by
           both business stakeholders and developers, and directly testable:
         </p>
-        <pre className="mt-4 overflow-x-auto rounded-box bg-zinc-950 p-5 text-sm leading-6 text-zinc-100 dark:bg-black">
+        <pre className="mt-4 overflow-x-auto rounded-box bg-black p-5 text-sm leading-6 text-zinc-100">
           <code>{`Feature: ERP product sync
   Shop operators need products from the Inventory System to land correctly in WooCommerce.
   Scenario: Simple online product publishes with price and stock

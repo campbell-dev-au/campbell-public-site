@@ -15,7 +15,7 @@ export default function PhotoFrame({
 }) {
   return (
     <div
-      className={`relative overflow-hidden rounded-box border border-black/10 shadow-sm dark:border-black/30 ${className}`}
+      className={`relative overflow-hidden rounded-box border border-black/30 shadow-sm ${className}`}
     >
       <Image
         src={src}
@@ -28,7 +28,7 @@ export default function PhotoFrame({
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-indigo-950/15 via-transparent to-fuchsia-400/10 dark:from-indigo-950/40 dark:to-fuchsia-400/5"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-indigo-950/40 via-transparent to-fuchsia-400/5"
       />
     </div>
   );

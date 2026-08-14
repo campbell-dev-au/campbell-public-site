@@ -38,7 +38,7 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <p className="max-w-md text-base leading-7 text-zinc-700 dark:text-zinc-300">
+      <p className="max-w-md text-base leading-7 text-zinc-300">
         Thanks — your message is on its way. I&rsquo;ll get back to you soon.
       </p>
     );
@@ -65,7 +65,7 @@ export default function ContactForm() {
           name="name"
           type="text"
           required
-          className="rounded-box border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-black/30 dark:bg-white/5 dark:focus:border-indigo-400"
+          className="rounded-box border border-black/30 bg-white/5 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-400"
         />
       </div>
 
@@ -78,7 +78,7 @@ export default function ContactForm() {
           name="email"
           type="email"
           required
-          className="rounded-box border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-black/30 dark:bg-white/5 dark:focus:border-indigo-400"
+          className="rounded-box border border-black/30 bg-white/5 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-400"
         />
       </div>
 
@@ -91,12 +91,12 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
-          className="rounded-box border border-black/15 bg-white/80 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-500 dark:border-black/30 dark:bg-white/5 dark:focus:border-indigo-400"
+          className="rounded-box border border-black/30 bg-white/5 px-3 py-2 text-sm outline-none backdrop-blur-sm focus:border-indigo-400"
         />
       </div>
 
       {status === "error" && (
-        <p className="text-sm text-red-600 dark:text-red-400">{errorMessage}</p>
+        <p className="text-sm text-red-400">{errorMessage}</p>
       )}
 
       <button
