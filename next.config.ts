@@ -4,10 +4,15 @@ import type { NextConfig } from "next";
 // rendering, which kills SSG/CDN caching on a site that is 100% static
 // pages with zero third-party scripts. style-src needs 'unsafe-inline'
 // until the inline `style` attributes in PhotoFrame.tsx and
-// app/about/page.tsx move into classes.
+// app/about/page.tsx move into classes. script-src needs 'unsafe-inline'
+// too, for the same SSG-without-nonces reason (see Next's CSP guide,
+// "Without Nonces"): Next inlines the RSC hydration payload as
+// `<script>self.__next_f.push(...)</script>` on every page, and without
+// this it's blocked outright, breaking hydration (and therefore all
+// client interactivity, e.g. the contact form) site-wide.
 const contentSecurityPolicy = [
   "default-src 'self'",
-  "script-src 'self'",
+  "script-src 'self' 'unsafe-inline'",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data:",
   "font-src 'self'",
