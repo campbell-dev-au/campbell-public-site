@@ -23,7 +23,9 @@ npm test                  # vitest — currently covers app/api/contact/route.ts
 
 ## CI
 
-`.github/workflows/ci.yml` runs lint, typecheck, and build on every push and pull request against `main`. Dependabot (`.github/dependabot.yml`) checks weekly for updates to `next`, `nodemailer`, and GitHub Actions.
+`.github/workflows/ci.yml` runs lint, typecheck, test, and build on every push and pull request against `main`. Dependabot (`.github/dependabot.yml`) checks weekly for updates to `next`, `nodemailer`, and GitHub Actions.
+
+Before pushing or opening a PR, run `npm run lint && npm run typecheck && npm test && npm run build` locally — same order as CI — so failures surface before the round-trip through GitHub Actions.
 
 ## Architecture
 
