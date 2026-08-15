@@ -116,25 +116,25 @@ export default function AboutPage() {
           </h3>
           <dl className="mt-3 flex flex-col gap-3 text-sm">
             <div>
-              <dt className="text-zinc-500">Based in</dt>
+              <dt className="text-zinc-400">Based in</dt>
               <dd className="text-zinc-200">
                 {siteConfig.location} · remote across Australia
               </dd>
             </div>
             <div>
-              <dt className="text-zinc-500">Experience</dt>
+              <dt className="text-zinc-400">Experience</dt>
               <dd className="text-zinc-200">
                 11+ years in software engineering
               </dd>
             </div>
             <div>
-              <dt className="text-zinc-500">Availability</dt>
+              <dt className="text-zinc-400">Availability</dt>
               <dd className="text-zinc-200">
                 Freelance &amp; contract work
               </dd>
             </div>
             <div>
-              <dt className="text-zinc-500">Background</dt>
+              <dt className="text-zinc-400">Background</dt>
               <dd className="text-zinc-200">
                 Law (1st Class Hons) &amp; International Studies
               </dd>
@@ -144,7 +144,7 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-16">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-400">
           Skills
         </h2>
         <div className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

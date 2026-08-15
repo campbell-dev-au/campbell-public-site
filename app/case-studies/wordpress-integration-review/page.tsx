@@ -28,7 +28,7 @@ function Section({
 }) {
   return (
     <section className="mt-10">
-      <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+      <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-400">
         {title}
       </h2>
       <div className="mt-3 max-w-2xl text-base leading-7 text-zinc-300">
@@ -41,7 +41,7 @@ function Section({
 export default function WordpressIntegrationReviewCaseStudy() {
   return (
     <div className="px-6 py-12 sm:px-10 sm:py-16">
-      <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+      <p className="text-sm font-semibold uppercase tracking-wide text-zinc-400">
         Case Study — Vibe-Code Health Check
       </p>
       <h1 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -115,7 +115,10 @@ export default function WordpressIntegrationReviewCaseStudy() {
           tests with functional tests written in Gherkin syntax; these would be readable by
           both business stakeholders and developers, and directly testable:
         </p>
-        <pre className="mt-4 overflow-x-auto rounded-box bg-black p-5 text-sm leading-6 text-zinc-100">
+        <pre
+          tabIndex={0}
+          className="mt-4 overflow-x-auto rounded-box bg-black p-5 text-sm leading-6 text-zinc-100"
+        >
           <code>{`Feature: ERP product sync
   Shop operators need products from the Inventory System to land correctly in WooCommerce.
   Scenario: Simple online product publishes with price and stock
