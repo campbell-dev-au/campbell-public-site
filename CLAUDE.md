@@ -18,14 +18,20 @@ npm run build         # production build (also type-checks)
 npm run start          # serve the production build
 npm run lint            # eslint
 npm run typecheck        # tsc --noEmit — type-check only, no build
-npm test                  # vitest — currently covers app/api/contact/route.ts
+npm test                  # vitest — currently covers app/api/contact/route.ts and lib/rate-limit.ts
+npm run test:e2e          # playwright — smoke-tests every route plus a mocked contact form submission
 ```
 
 ## CI
 
-`.github/workflows/ci.yml` runs lint, typecheck, test, and build on every push and pull request against `main`. Dependabot (`.github/dependabot.yml`) checks weekly for updates to `next`, `nodemailer`, and GitHub Actions.
+`.github/workflows/ci.yml` runs lint, typecheck, test, build, and the Playwright e2e suite on every push and pull request against `main`. Dependabot (`.github/dependabot.yml`) checks weekly for updates to `next`, `nodemailer`, and GitHub Actions.
 
-Before pushing or opening a PR, run `npm run lint && npm run typecheck && npm test && npm run build` locally — same order as CI — so failures surface before the round-trip through GitHub Actions.
+Before pushing or opening a PR, run `npm run lint && npm run typecheck && npm test && npm run build && npm run test:e2e` locally — same order as CI — so failures surface before the round-trip through GitHub Actions.
+
+## Testing
+
+- **Vitest** (`npm test`) covers logic that's cheap to unit-test in isolation: `app/api/contact/route.ts` (validation, honeypot, rate limiting, SMTP wiring, all with `nodemailer` mocked) and `lib/rate-limit.ts`.
+- **Playwright** (`npm run test:e2e`, `e2e/*.spec.ts`) covers what vitest can't: that every page actually renders in a browser with no console errors, that header nav links work, that `robots.txt`/`sitemap.xml` are served, and that `ContactForm` renders the right UI (success / error state) for a given API response. `e2e/contact-form.spec.ts` mocks `**/api/contact` at the network layer via `page.route` — no real request ever reaches the Route Handler or SMTP, so this suite needs no env vars and sends no mail. `playwright.config.ts` builds and serves the app locally (`next start` on port 3100); in CI it reuses the build the workflow already produced instead of building twice.
 
 ## Architecture
 
