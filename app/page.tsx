@@ -73,7 +73,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="mt-auto inline-flex w-fit items-center justify-center rounded-box bg-gradient-to-br from-indigo-600 to-fuchsia-600 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+              className="mt-auto inline-flex w-fit items-center justify-center rounded-box border border-transparent bg-gradient-to-br from-indigo-600 to-fuchsia-600 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
             >
               Book a Health Check
             </Link>
@@ -92,7 +92,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="mt-auto inline-flex w-fit items-center justify-center rounded-box bg-gradient-to-br from-indigo-600 to-fuchsia-600 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+              className="mt-auto inline-flex w-fit items-center justify-center rounded-box border border-transparent bg-gradient-to-br from-indigo-600 to-fuchsia-600 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
             >
               Start a Project
             </Link>
@@ -110,7 +110,7 @@ export default function Home() {
           </span>
           <Link
             href="/services#business-process-improvement"
-            className="font-semibold text-indigo-400 hover:underline"
+            className="font-semibold text-indigo-400 underline underline-offset-4"
           >
             See how →
           </Link>
