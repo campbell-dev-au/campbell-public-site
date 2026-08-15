@@ -15,7 +15,7 @@ export default function Home() {
         />
         <section className="relative flex flex-col-reverse items-start gap-10 p-8 sm:flex-row sm:items-center sm:p-10">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600">
+            <p className="text-xs font-semibold uppercase tracking-wide text-indigo-400">
               Freelance developer | Adelaide
             </p>
             <h1 className="mt-2 text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
@@ -26,7 +26,7 @@ export default function Home() {
               AI-generated kind nobody&rsquo;s checked yet. One person, full
               accountability, and over a decade spent building software that works.
             </p>
-            <p className="mt-6 text-sm text-zinc-500">
+            <p className="mt-6 text-sm text-zinc-400">
               Recently: found the gaps in a 35,000-line AI-built plugin before
               it shipped.{" "}
               <Link
@@ -60,7 +60,7 @@ export default function Home() {
         </p>
         <div className="mt-6 grid gap-5 sm:grid-cols-2">
           <div className="flex flex-col gap-4 rounded-box border border-black/30 bg-gradient-to-br from-indigo-500/10 to-transparent p-7">
-            <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
+            <p className="text-xs font-semibold uppercase tracking-wide text-zinc-400">
               Already built something
             </p>
             <h2 className="text-xl font-semibold tracking-tight text-balance">
@@ -79,7 +79,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="flex flex-col gap-4 rounded-box border border-black/30 bg-gradient-to-br from-fuchsia-500/10 to-transparent p-7">
-            <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
+            <p className="text-xs font-semibold uppercase tracking-wide text-zinc-400">
               Starting from scratch
             </p>
             <h2 className="text-xl font-semibold tracking-tight text-balance">

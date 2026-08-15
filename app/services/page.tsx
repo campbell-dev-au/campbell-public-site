@@ -35,7 +35,7 @@ export default function ServicesPage() {
           return (
             <div key={group.key}>
               <div className="sticky top-16 z-10 -mx-1 bg-zinc-900/95 px-1 py-3 backdrop-blur-sm">
-                <p className="font-mono text-xs font-semibold uppercase tracking-wide text-zinc-500">
+                <p className="font-mono text-xs font-semibold uppercase tracking-wide text-zinc-400">
                   The situation
                 </p>
                 <h2 className="mt-1 text-xl font-medium tracking-tight text-balance text-zinc-400">
