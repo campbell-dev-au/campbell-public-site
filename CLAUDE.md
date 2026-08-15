@@ -18,15 +18,16 @@ npm run build         # production build (also type-checks)
 npm run start          # serve the production build
 npm run lint            # eslint
 npm run typecheck        # tsc --noEmit — type-check only, no build
+npm run knip              # unused files/exports/dependencies
 npm test                  # vitest — currently covers app/api/contact/route.ts and lib/rate-limit.ts
 npm run test:e2e          # playwright — smoke-tests every route plus a mocked contact form submission
 ```
 
 ## CI
 
-`.github/workflows/ci.yml` runs lint, typecheck, test, build, and the Playwright e2e suite on every push and pull request against `main`. Dependabot (`.github/dependabot.yml`) checks weekly for updates to `next`, `nodemailer`, and GitHub Actions.
+`.github/workflows/ci.yml` runs lint, typecheck, knip, test, build, and the Playwright e2e suite on every push and pull request against `main`. Dependabot (`.github/dependabot.yml`) checks weekly for updates to `next`, `nodemailer`, and GitHub Actions.
 
-Before pushing or opening a PR, run `npm run lint && npm run typecheck && npm test && npm run build && npm run test:e2e` locally — same order as CI — so failures surface before the round-trip through GitHub Actions.
+Before pushing or opening a PR, run `npm run lint && npm run typecheck && npm run knip && npm test && npm run build && npm run test:e2e` locally — same order as CI — so failures surface before the round-trip through GitHub Actions.
 
 ## Testing
 
