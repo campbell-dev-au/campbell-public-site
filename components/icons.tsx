@@ -9,7 +9,7 @@ const base = {
   strokeLinejoin: "round" as const,
 };
 
-export function WebsiteIcon({ className }: IconProps) {
+function WebsiteIcon({ className }: IconProps) {
   return (
     <svg {...base} className={className}>
       <rect x="3" y="4" width="18" height="16" rx="2" />
@@ -20,7 +20,7 @@ export function WebsiteIcon({ className }: IconProps) {
   );
 }
 
-export function ProcessIcon({ className }: IconProps) {
+function ProcessIcon({ className }: IconProps) {
   return (
     <svg {...base} className={className}>
       <circle cx="5.5" cy="6" r="2.25" />
@@ -32,7 +32,7 @@ export function ProcessIcon({ className }: IconProps) {
   );
 }
 
-export function CodeIcon({ className }: IconProps) {
+function CodeIcon({ className }: IconProps) {
   return (
     <svg {...base} className={className}>
       <path d="M9 8 4.5 12 9 16" />
@@ -42,7 +42,7 @@ export function CodeIcon({ className }: IconProps) {
   );
 }
 
-export function HealthCheckIcon({ className }: IconProps) {
+function HealthCheckIcon({ className }: IconProps) {
   return (
     <svg {...base} className={className}>
       <rect x="5" y="4.5" width="14" height="16" rx="2" />
@@ -52,7 +52,7 @@ export function HealthCheckIcon({ className }: IconProps) {
   );
 }
 
-export function RocketIcon({ className }: IconProps) {
+function RocketIcon({ className }: IconProps) {
   return (
     <svg {...base} className={className}>
       <path d="M12 2.5c2.5 1.6 4 4.5 4 8 0 2-.6 3.7-1.3 5l-2.7 3-2.7-3C8.6 14.2 8 12.5 8 10.5c0-3.5 1.5-6.4 4-8Z" />

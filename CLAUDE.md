@@ -18,6 +18,7 @@ npm run build         # production build (also type-checks)
 npm run start          # serve the production build
 npm run lint            # eslint
 npm run typecheck        # tsc --noEmit — type-check only, no build
+npm run knip              # unused files/exports/dependencies
 npm test                  # vitest — currently covers app/api/contact/route.ts and lib/rate-limit.ts
 npm run test:e2e          # playwright — smoke-tests every route plus a mocked contact form submission
 ```
@@ -26,7 +27,8 @@ npm run test:e2e          # playwright — smoke-tests every route plus a mocked
 
 `.github/workflows/ci.yml` runs lint, typecheck, test, build, and the Playwright e2e suite on every push and pull request against `main`. A separate `bearer` job in the same workflow runs [Bearer CLI](https://docs.bearer.com) (SAST) via `bearer/bearer-action@v2` and uploads SARIF results to the repo's GitHub code scanning tab (free on this public repo); it fails the check on any critical/high/medium/low finding (Bearer's default threshold) — install locally with `brew install bearer/tap/bearer` and run `bearer scan .` to reproduce. Dependabot (`.github/dependabot.yml`) checks weekly for updates to `next`, `nodemailer`, and GitHub Actions.
 
-Before pushing or opening a PR, run `npm run lint && npm run typecheck && npm test && npm run build && npm run test:e2e` locally — same order as CI — so failures surface before the round-trip through GitHub Actions. Run `bearer scan .` too if you touched code that logs, sends, or persists user input.
+Before pushing or opening a PR, run `npm run lint && npm run typecheck && npm test && npm run build && npm run test:e2e` locally — same order as CI — so failures surface before the round-trip through GitHub Actions. Run `
+scan .` too if you touched code that logs, sends, or persists user input.
 
 ## Testing
 
