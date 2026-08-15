@@ -26,6 +26,7 @@ export default function Footer() {
           >
             <LinkedinIcon className="h-4 w-4" />
             LinkedIn
+            <span className="sr-only"> (opens in a new tab)</span>
           </a>
           <a
             href={siteConfig.github}
@@ -35,6 +36,7 @@ export default function Footer() {
           >
             <GithubIcon className="h-4 w-4" />
             GitHub
+            <span className="sr-only"> (opens in a new tab)</span>
           </a>
           <Link
             href="/contact"
