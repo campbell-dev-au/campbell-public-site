@@ -40,6 +40,15 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // devDependencies alias `typescript` to the TS 6 API package (per
+  // https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/#running-side-by-side-with-typescript-6.0)
+  // so typescript-eslint keeps working, with the real TS 7 compiler under
+  // `@typescript/native`. Next's default TypeScript-CLI mode expects the
+  // `typescript` package itself to expose `bin/tsc`, which this scheme
+  // doesn't provide, so fall back to Next's TypeScript-API type checking.
+  experimental: {
+    useTypeScriptCli: false,
+  },
   async headers() {
     return [
       {

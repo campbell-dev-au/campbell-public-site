@@ -8,10 +8,13 @@ const eslintConfig = defineConfig([
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
-    ".next/**",
-    "out/**",
-    "build/**",
+    "**/.next/**",
+    "**/out/**",
+    "**/build/**",
     "next-env.d.ts",
+    // Nested git worktrees (each has its own source tree + build output,
+    // linted independently — not part of this checkout's source).
+    ".claude/worktrees/**",
   ]),
 ]);
 
