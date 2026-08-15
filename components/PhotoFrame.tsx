@@ -22,7 +22,7 @@ export default function PhotoFrame({
         alt={alt}
         fill
         priority={priority}
-        sizes="(min-width: 1024px) 50vw, 100vw"
+        sizes="(min-width: 1024px) 896px, (min-width: 640px) calc(100vw - 128px), calc(100vw - 80px)"
         className="object-cover"
         style={{ objectPosition }}
       />
