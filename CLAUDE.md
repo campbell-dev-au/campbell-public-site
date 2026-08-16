@@ -20,19 +20,20 @@ npm run lint            # eslint
 npm run typecheck        # tsc --noEmit — type-check only, no build
 npm run knip              # unused files/exports/dependencies
 npm test                  # vitest — currently covers app/api/contact/route.ts and lib/rate-limit.ts
-npm run test:e2e          # playwright — smoke-tests every route plus a mocked contact form submission
+npm run test:e2e          # playwright — smoke-tests every route, a mocked contact form submission, and axe-core accessibility checks
 ```
 
 ## CI
 
-`.github/workflows/ci.yml` runs lint, typecheck, knip, test, build, and the Playwright e2e suite on every push and pull request against `main`. Dependabot (`.github/dependabot.yml`) checks weekly for updates to `next`, `nodemailer`, and GitHub Actions.
+`.github/workflows/ci.yml` runs lint, typecheck, knip, test, build, and the Playwright e2e suite on every push and pull request against `main`. A separate `bearer` job in the same workflow runs [Bearer CLI](https://docs.bearer.com) (SAST) via `bearer/bearer-action@v2` and uploads SARIF results to the repo's GitHub code scanning tab (free on this public repo); it fails the check on any critical/high/medium/low finding (Bearer's default threshold) — install locally with `brew install bearer/tap/bearer` and run `bearer scan .` to reproduce. Dependabot (`.github/dependabot.yml`) checks weekly for updates to `next`, `nodemailer`, and GitHub Actions.
 
-Before pushing or opening a PR, run `npm run lint && npm run typecheck && npm run knip && npm test && npm run build && npm run test:e2e` locally — same order as CI — so failures surface before the round-trip through GitHub Actions.
+Before pushing or opening a PR, run `npm run lint && npm run typecheck && npm run knip && npm test && npm run build && npm run test:e2e` locally — same order as CI — so failures surface before the round-trip through GitHub Actions. Run `bearer scan .` too if you touched code that logs, sends, or persists user input.
 
 ## Testing
 
 - **Vitest** (`npm test`) covers logic that's cheap to unit-test in isolation: `app/api/contact/route.ts` (validation, honeypot, rate limiting, SMTP wiring, all with `nodemailer` mocked) and `lib/rate-limit.ts`.
 - **Playwright** (`npm run test:e2e`, `e2e/*.spec.ts`) covers what vitest can't: that every page actually renders in a browser with no console errors, that header nav links work, that `robots.txt`/`sitemap.xml` are served, and that `ContactForm` renders the right UI (success / error state) for a given API response. `e2e/contact-form.spec.ts` mocks `**/api/contact` at the network layer via `page.route` — no real request ever reaches the Route Handler or SMTP, so this suite needs no env vars and sends no mail. `playwright.config.ts` builds and serves the app locally (`next start` on port 3100); in CI it reuses the build the workflow already produced instead of building twice.
+- **Accessibility** (`e2e/accessibility.spec.ts`) runs `@axe-core/playwright` (WCAG 2.0/2.1 A + AA rules) against every route in `e2e/routes.ts` and asserts zero violations. `e2e/routes.ts` is the single list of page routes, imported by both `routes.spec.ts` and `accessibility.spec.ts` — add new routes there, not in either spec file. Only flags what axe can detect automatically (contrast, missing labels, focusability, ARIA misuse, etc.) — it's not a substitute for manual keyboard/screen-reader testing, just a regression net for the categories axe covers.
 
 ## Architecture
 

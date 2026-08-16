@@ -66,7 +66,7 @@ export default function ContactPage() {
           </div>
 
           <div className="rounded-box border border-black/30 bg-white/5 p-5">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-zinc-400">
               What to include
             </h3>
             <ul className="mt-3 flex flex-col gap-2 text-sm leading-6 text-zinc-300">

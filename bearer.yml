@@ -1,0 +1,3 @@
+scan:
+  skip-path:
+    - node_modules
