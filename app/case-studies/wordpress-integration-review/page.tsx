@@ -58,7 +58,7 @@ export default function WordpressIntegrationReviewCaseStudy() {
       <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3">
         <Stat value="35,000" label="lines of code" />
         <Stat value="190" label="classes" />
-        <Stat value="4" label="tools recommended" />
+        <Stat value="4" label="priority actions" />
       </div>
 
       <Section title="The situation">
@@ -73,8 +73,8 @@ export default function WordpressIntegrationReviewCaseStudy() {
       <Section title="The approach">
         <ul className="flex flex-col gap-2">
           <li>· Architecture review</li>
-          <li>· Automated complexity/quality scanning (PHPMetrics)</li>
-          <li>· Security/standards check (WordPress Plugin Check)</li>
+          <li>· Automated complexity/quality scanning</li>
+          <li>· Security/standards check</li>
           <li>· Review of existing automated test coverage</li>
         </ul>
       </Section>
@@ -97,44 +97,15 @@ export default function WordpressIntegrationReviewCaseStudy() {
             growth is planned, in which case a more decoupled architecture was recommended.
           </li>
           <li>
-            Add BDD-style functional tests (Gherkin) so business requirements
-            are captured in human-readable form, alongside the existing unit
-            tests.
+            Add human-readable functional tests so business requirements are
+            captured in plain language, alongside the existing unit tests.
           </li>
           <li>
-            Adopt PHPStan, PHPMetrics, and WordPress Plugin Check as ongoing
-            quality gates.
+            Adopt automated quality and standards scanning as an ongoing
+            gate before each release.
           </li>
           <li>Fix flagged security issues before any production release.</li>
         </ul>
-      </Section>
-
-      <Section title="Functional tests">
-        <p>
-          Part of the recommendation was to complement the existing unit
-          tests with functional tests written in Gherkin syntax; these would be readable by
-          both business stakeholders and developers, and directly testable:
-        </p>
-        <pre
-          tabIndex={0}
-          className="mt-4 overflow-x-auto rounded-box bg-black p-5 text-sm leading-6 text-zinc-100"
-        >
-          <code>{`Feature: ERP product sync
-  Shop operators need products from the Inventory System to land correctly in WooCommerce.
-  Scenario: Simple online product publishes with price and stock
-    Given an ERP product with stockcode "TEST-001"
-    And its description is "Test Widget"
-    And it is marked online
-    And its price is 99.99
-    And its available quantity is 10
-    When the product is synced to WooCommerce
-    Then a product with SKU "TEST-001" exists
-    And it is published
-    And its name is "Test Widget"
-    And its price is 99.99
-    And its stock quantity is 10
-    And its stock status is "in stock"`}</code>
-        </pre>
       </Section>
 
       <Section title="The outcome">
