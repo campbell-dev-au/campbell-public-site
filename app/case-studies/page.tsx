@@ -5,7 +5,8 @@ import { caseStudies } from "@/lib/case-studies";
 
 export const metadata: Metadata = {
   title: "Case Studies",
-  description: "Real engagements, including a full vibe-code health check.",
+  description:
+    "A vibe-code health check of an AI-built integration, and a production app built story-first.",
 };
 
 export default function CaseStudiesPage() {
@@ -20,7 +21,8 @@ export default function CaseStudiesPage() {
       />
       <h1 className="mt-8 text-4xl font-semibold tracking-tight">Case Studies</h1>
       <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-400">
-        A look at how engagements actually play out.
+        A look at how the work actually plays out — on client engagements
+        and on my own products.
       </p>
 
       <div className="mt-12 flex flex-col gap-6">

@@ -4,6 +4,7 @@ export const routes = [
   "/",
   "/services",
   "/case-studies",
+  "/case-studies/simple-gift-registry",
   "/case-studies/wordpress-integration-review",
   "/about",
   "/contact",
