@@ -198,8 +198,8 @@ export default function SimpleGiftRegistryCaseStudy() {
             rel="noopener noreferrer"
             className="text-indigo-400 underline underline-offset-4"
           >
-            full source, stories and scenarios are public
-          </a>.
+            full source, stories and scenarios
+          </a> are public.
         </p>
         <p className="mt-4">
           AI didn&rsquo;t make the engineering discipline unnecessary. It made
