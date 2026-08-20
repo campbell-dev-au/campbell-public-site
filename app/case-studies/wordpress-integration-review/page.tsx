@@ -72,10 +72,30 @@ export default function WordpressIntegrationReviewCaseStudy() {
 
       <Section title="The approach">
         <ul className="flex flex-col gap-2">
-          <li>· Architecture review</li>
-          <li>· Automated complexity/quality scanning</li>
-          <li>· Security/standards check</li>
-          <li>· Review of existing automated test coverage</li>
+          <li className="flex gap-3">
+            <span aria-hidden className="text-indigo-400">
+              ·
+            </span>
+            <span>Architecture review</span>
+          </li>
+          <li className="flex gap-3">
+            <span aria-hidden className="text-indigo-400">
+              ·
+            </span>
+            <span>Automated complexity/quality scanning</span>
+          </li>
+          <li className="flex gap-3">
+            <span aria-hidden className="text-indigo-400">
+              ·
+            </span>
+            <span>Security/standards check</span>
+          </li>
+          <li className="flex gap-3">
+            <span aria-hidden className="text-indigo-400">
+              ·
+            </span>
+            <span>Review of existing automated test coverage</span>
+          </li>
         </ul>
       </Section>
 
@@ -92,19 +112,39 @@ export default function WordpressIntegrationReviewCaseStudy() {
 
       <Section title="The recommendation">
         <ul className="flex flex-col gap-3">
-          <li>
-            Keep the current architecture unless significant further feature
-            growth is planned, in which case a more decoupled architecture was recommended.
+          <li className="flex gap-3">
+            <span aria-hidden className="text-indigo-400">
+              ·
+            </span>
+            <span>
+              Keep the current architecture unless significant further feature
+              growth is planned, in which case a more decoupled architecture was recommended.
+            </span>
           </li>
-          <li>
-            Add human-readable functional tests so business requirements are
-            captured in plain language, alongside the existing unit tests.
+          <li className="flex gap-3">
+            <span aria-hidden className="text-indigo-400">
+              ·
+            </span>
+            <span>
+              Add human-readable functional tests so business requirements are
+              captured in plain language, alongside the existing unit tests.
+            </span>
           </li>
-          <li>
-            Adopt automated quality and standards scanning as an ongoing
-            gate before each release.
+          <li className="flex gap-3">
+            <span aria-hidden className="text-indigo-400">
+              ·
+            </span>
+            <span>
+              Adopt automated quality and standards scanning as an ongoing
+              gate before each release.
+            </span>
           </li>
-          <li>Fix flagged security issues before any production release.</li>
+          <li className="flex gap-3">
+            <span aria-hidden className="text-indigo-400">
+              ·
+            </span>
+            <span>Fix flagged security issues before any production release.</span>
+          </li>
         </ul>
       </Section>
 

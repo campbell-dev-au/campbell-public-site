@@ -57,6 +57,7 @@ export const services: Service[] = [
       "Functional/BDD-style tests that reflect real business requirements",
       "A codebase a future developer (human or AI) can keep building on",
     ],
+    link: { href: "/case-studies/simple-gift-registry", label: "See a real example" },
   },
   {
     slug: "website-development",
