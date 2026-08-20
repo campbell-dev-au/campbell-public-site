@@ -77,18 +77,33 @@ export default function SimpleGiftRegistryCaseStudy() {
           Every feature went through the same three steps:
         </p>
         <ul className="mt-4 flex flex-col gap-3">
-          <li>
-            A short <strong>user story</strong> in plain language: who wants
-            what, why, and how will we know when we&rsquo;re done?
+          <li className="flex gap-3">
+            <span aria-hidden className="text-indigo-400">
+              ·
+            </span>
+            <span>
+              A short <strong>user story</strong> in plain language: who wants
+              what, why, and how will we know when we&rsquo;re done?
+            </span>
           </li>
-          <li>
-            A <strong>functional test</strong> per criterion, written in
-            Given/When/Then so it reads as a business requirement rather than
-            a technical assertion.
+          <li className="flex gap-3">
+            <span aria-hidden className="text-indigo-400">
+              ·
+            </span>
+            <span>
+              A <strong>functional test</strong> per criterion, written in
+              Given/When/Then so it reads as a business requirement rather than
+              a technical assertion.
+            </span>
           </li>
-          <li>
-            Only then, <strong>just enough application code</strong> to make
-            the scenario pass.
+          <li className="flex gap-3">
+            <span aria-hidden className="text-indigo-400">
+              ·
+            </span>
+            <span>
+              Only then, <strong>just enough application code</strong> to make
+              the scenario pass.
+            </span>
           </li>
         </ul>
         <p className="mt-4">
@@ -124,23 +139,43 @@ export default function SimpleGiftRegistryCaseStudy() {
           the app the way a health check would:
         </p>
         <ul className="mt-4 flex flex-col gap-3">
-          <li>
-            Access checks on every route and every action, not just the pages
-            — so knowing an internal ID isn&rsquo;t a back door into someone
-            else&rsquo;s data.
+          <li className="flex gap-3">
+            <span aria-hidden className="text-indigo-400">
+              ·
+            </span>
+            <span>
+              Access checks on every route and every action, not just the pages
+              — so knowing an internal ID isn&rsquo;t a back door into someone
+              else&rsquo;s data.
+            </span>
           </li>
-          <li>
-            A rotatable share link plus an optional password, arranged so that
-            changing either one immediately cuts off everyone holding the old
-            one.
+          <li className="flex gap-3">
+            <span aria-hidden className="text-indigo-400">
+              ·
+            </span>
+            <span>
+              A rotatable share link plus an optional password, arranged so that
+              changing either one immediately cuts off everyone holding the old
+              one.
+            </span>
           </li>
-          <li>
-            Limits on how much any one account can create, and validation of
-            every user-supplied identifier before it reaches the database.
+          <li className="flex gap-3">
+            <span aria-hidden className="text-indigo-400">
+              ·
+            </span>
+            <span>
+              Limits on how much any one account can create, and validation of
+              every user-supplied identifier before it reaches the database.
+            </span>
           </li>
-          <li>
-            Security headers, private pages excluded from search engines, and confirmed
-            &ldquo;delete my data and my account&rdquo; functions available to users.
+          <li className="flex gap-3">
+            <span aria-hidden className="text-indigo-400">
+              ·
+            </span>
+            <span>
+              Security headers, private pages excluded from search engines, and confirmed
+              &ldquo;delete my data and my account&rdquo; functions available to users.
+            </span>
           </li>
         </ul>
       </Section>
